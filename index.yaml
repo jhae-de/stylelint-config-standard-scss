@@ -1,0 +1,26 @@
+customSyntax: postcss-scss
+plugins:
+  - stylelint-scss
+extends:
+  - stylelint-config-standard-scss
+rules:
+  at-rule-disallowed-list:
+    - import
+    - debug
+  color-hex-length: long
+  scss/at-each-key-value-single-line: true
+  scss/at-extend-no-missing-placeholder: true
+  scss/at-function-named-arguments:
+    - always
+    - ignore:
+        - single-argument
+  scss/at-mixin-argumentless-call-parentheses: always
+  scss/at-mixin-named-arguments:
+    - always
+    - ignore:
+        - single-argument
+  scss/comment-no-empty: true
+  scss/dimension-no-non-numeric-values: true
+  scss/function-quote-no-quoted-strings-inside: true
+  scss/function-unquote-no-unquoted-strings-inside: true
+  scss/no-global-function-names: true
