@@ -7,6 +7,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-10-23
+
+### Removed
+
+The following rules have been removed as they are already part of one of the extended configurations.
+
+- scss/at-extend-no-missing-placeholder
+- scss/comment-no-empty
+- scss/function-quote-no-quoted-strings-inside
+- scss/function-unquote-no-unquoted-strings-inside
+- scss/no-global-function-names
+
 ## [1.0.0] - 2023-10-22
 
 Initial release
@@ -26,5 +38,6 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v1.0.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v1.1.0...main
+[1.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.1.0
 [1.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.0.0

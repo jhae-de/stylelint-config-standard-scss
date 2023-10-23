@@ -9,7 +9,6 @@ rules:
     - debug
   color-hex-length: long
   scss/at-each-key-value-single-line: true
-  scss/at-extend-no-missing-placeholder: true
   scss/at-function-named-arguments:
     - always
     - ignore:
@@ -19,8 +18,4 @@ rules:
     - always
     - ignore:
         - single-argument
-  scss/comment-no-empty: true
   scss/dimension-no-non-numeric-values: true
-  scss/function-quote-no-quoted-strings-inside: true
-  scss/function-unquote-no-unquoted-strings-inside: true
-  scss/no-global-function-names: true
