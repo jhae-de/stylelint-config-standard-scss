@@ -1,5 +1,5 @@
 ![Version](https://img.shields.io/npm/v/%40jhae/stylelint-config-standard-scss?label=Version)
-![License](https://img.shields.io/github/license/jhae-de/stylelint-config-standard-scss?label=License)
+![License](https://img.shields.io/github/license/jhae-de/stylelint-config-standard-scss?label=License&color=lightgrey)
 ![Tests](https://img.shields.io/github/actions/workflow/status/jhae-de/stylelint-config-standard-scss/lint-test.yaml?label=Tests)
 
 # Standard SCSS Stylelint Config
