@@ -23,6 +23,12 @@ rules:
         - inside-function
   declaration-block-no-duplicate-properties: true
   font-weight-notation: numeric
+  rule-empty-line-before:
+    - always
+    - except:
+        - first-nested
+      ignore:
+        - after-comment
   selector-max-id: 1
   scss/at-each-key-value-single-line: true
   scss/at-function-named-arguments:
