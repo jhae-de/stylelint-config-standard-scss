@@ -13,6 +13,7 @@ rules:
     - ignore:
         - inside-function
   declaration-block-no-duplicate-properties: true
+  font-weight-notation: numeric
   scss/at-each-key-value-single-line: true
   scss/at-function-named-arguments:
     - always
