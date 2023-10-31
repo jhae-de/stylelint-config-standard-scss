@@ -8,6 +8,10 @@ rules:
     - import
     - debug
   color-hex-length: long
+  color-named:
+    - never
+    - ignore:
+        - inside-function
   scss/at-each-key-value-single-line: true
   scss/at-function-named-arguments:
     - always
