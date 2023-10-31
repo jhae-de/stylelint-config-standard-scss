@@ -7,6 +7,15 @@ rules:
   at-rule-disallowed-list:
     - import
     - debug
+  at-rule-empty-line-before:
+    - always
+    - except:
+        - blockless-after-same-name-blockless
+        - first-nested
+      ignore:
+        - after-comment
+      ignoreAtRules:
+        - else
   color-hex-length: long
   color-named:
     - never
