@@ -12,6 +12,7 @@ rules:
     - never
     - ignore:
         - inside-function
+  declaration-block-no-duplicate-properties: true
   scss/at-each-key-value-single-line: true
   scss/at-function-named-arguments:
     - always
