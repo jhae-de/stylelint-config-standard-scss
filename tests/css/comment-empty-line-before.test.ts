@@ -1,0 +1,38 @@
+import { RuleTest } from '@jhae/stylelint-rule-tester';
+
+RuleTest.setConfigFile('index.yaml');
+
+RuleTest.describe(
+  'comment-empty-line-before',
+  {
+    name: 'Require an empty line before comments',
+    code: `
+      test {}
+      /* Comment */
+    `,
+    expect: {
+      errored: true,
+      messages: ['Expected empty line before comment'],
+      severities: ['error'],
+    },
+  },
+  {
+    name: 'Require an empty line before comments except first nested',
+    code: `
+      test {
+        /* Comment */
+        color: black;
+      }
+    `,
+  },
+  {
+    name: 'Ignore an empty line before Stylelint commands',
+    code: `
+      test {
+        background: black;
+        /* stylelint-disable-next-line color-no-hex */
+        color: #ffffff;
+      }
+    `,
+  },
+);
