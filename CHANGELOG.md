@@ -7,6 +7,48 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.2.0] - 2023-11-03
+
+### Added
+
+- `stylelint-scss` dependency
+- `color-named` rule
+- `declaration-block-no-duplicate-properties` rule
+- `font-weight-notation` rule
+- `selector-max-id` rule
+- `scss/block-no-redundant-nesting` rule
+- `scss/dollar-variable-colon-newline-after` rule
+- `scss/dollar-variable-colon-space-after` rule
+- `scss/function-calculation-no-interpolation` rule
+- `scss/load-no-partial-leading-underscore` rule
+- `scss/property-no-unknown` rule
+
+### Changed
+
+- Updated dependencies
+  - `@types/jest`
+  - `@typescript-eslint/eslint-plugin`
+  - `@typescript-eslint/parser`
+- `at-rule-empty-line-before` rule
+  - Replaced `blockless-after-blockless` with `blockless-after-same-name-blockless`
+- `rule-empty-line-before` rule
+  - Replaced `always-multi-line` with `always`
+- `property-no-unknown` rule
+  - Disabled rule in favor of `scss/property-no-unknown` rule
+
+### Fixed
+
+- Added rule name to custom messages of
+  - `custom-media-pattern` rule
+  - `custom-property-pattern` rule
+  - `keyframes-name-pattern` rule
+  - `selector-class-pattern` rule
+  - `selector-id-pattern` rule
+  - `scss/at-function-pattern` rule
+  - `scss/at-mixin-pattern` rule
+  - `scss/dollar-variable-pattern` rule
+  - `scss/percent-placeholder-pattern` rule
+
 ## [1.1.0] - 2023-10-23
 
 ### Removed
@@ -38,6 +80,7 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v1.1.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v1.2.0...main
+[1.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.2.0
 [1.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.1.0
 [1.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.0.0
