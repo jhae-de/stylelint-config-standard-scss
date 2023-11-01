@@ -58,3 +58,4 @@ rules:
   scss/block-no-redundant-nesting: true
   scss/dimension-no-non-numeric-values: true
   scss/dollar-variable-colon-newline-after: always-multi-line
+  scss/dollar-variable-colon-space-after: always-single-line
