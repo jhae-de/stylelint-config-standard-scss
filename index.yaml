@@ -46,20 +46,34 @@ rules:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected id selector to be kebab-case (selector-id-pattern)
   selector-max-id: 1
+
+  # SCSS
   scss/at-each-key-value-single-line: true
   scss/at-function-named-arguments:
     - always
     - ignore:
         - single-argument
+  scss/at-function-pattern:
+    - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Expected function name to be kebab-case (scss/at-function-pattern)
   scss/at-mixin-argumentless-call-parentheses: always
   scss/at-mixin-named-arguments:
     - always
     - ignore:
         - single-argument
+  scss/at-mixin-pattern:
+    - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Expected mixin name to be kebab-case (scss/at-mixin-pattern)
   scss/block-no-redundant-nesting: true
   scss/dimension-no-non-numeric-values: true
   scss/dollar-variable-colon-newline-after: always-multi-line
   scss/dollar-variable-colon-space-after: always-single-line
+  scss/dollar-variable-pattern:
+    - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Expected variable name to be kebab-case (scss/dollar-variable-pattern)
   scss/function-calculation-no-interpolation: true
   scss/load-no-partial-leading-underscore: true
+  scss/percent-placeholder-pattern:
+    - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Expected placeholder name to be kebab-case (scss/percent-placeholder-pattern)
   scss/property-no-unknown: true
