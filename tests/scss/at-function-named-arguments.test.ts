@@ -5,9 +5,9 @@ RuleTest.setConfigFile('index.yaml');
 RuleTest.describe(
   'scss/at-function-named-arguments',
   {
-    name: 'rejects unnamed arguments in function calls',
+    name: 'Disallow unnamed arguments in function calls',
     code: `
-      .test {
+      test {
         animation: animation(250ms, 100ms, infinite);
         border: reset($value: 20, 'bar', $color: #FFFFFF);
       }
@@ -19,9 +19,9 @@ RuleTest.describe(
     },
   },
   {
-    name: 'accepts unnamed single argument in function calls',
+    name: 'Allow unnamed single argument in function calls',
     code: `
-      .test {
+      test {
         animation: animation(250ms);
         animation: animation($duration: 250ms);
         animation: animation($duration: 250ms, $delay: 100ms, $direction: infinite);

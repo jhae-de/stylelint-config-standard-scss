@@ -3,10 +3,10 @@ import { RuleTest } from '@jhae/stylelint-rule-tester';
 RuleTest.setConfigFile('index.yaml');
 
 RuleTest.describe('scss/function-quote-no-quoted-strings-inside', {
-  name: 'rejects quoted strings inside the quote function',
+  name: 'Disallow quoted strings inside the quote function',
   code: `
     $test: 'Helvetica';
-    .test {
+    test {
       font-family: quote($test);
     }
   `,

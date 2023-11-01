@@ -3,12 +3,12 @@ import { RuleTest } from '@jhae/stylelint-rule-tester';
 RuleTest.setConfigFile('index.yaml');
 
 RuleTest.describe('scss/at-extend-no-missing-placeholder', {
-  name: 'rejects "@extend" with missing placeholder',
+  name: 'Disallow "@extend" with missing placeholder',
   code: `
-    .test {
+    test {
       @extend .class;
       @extend #identifer;
-      @extend .test-#{$dynamically_generated_name};
+      @extend .test-#{$dynamically-generated-name};
     }
   `,
   expect: {
