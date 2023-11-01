@@ -60,3 +60,4 @@ rules:
   scss/dollar-variable-colon-newline-after: always-multi-line
   scss/dollar-variable-colon-space-after: always-single-line
   scss/function-calculation-no-interpolation: true
+  scss/load-no-partial-leading-underscore: true
