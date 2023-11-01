@@ -32,6 +32,7 @@ rules:
   keyframes-name-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected keyframe name to be kebab-case (keyframes-name-pattern)
+  property-no-unknown: null
   rule-empty-line-before:
     - always
     - except:
@@ -61,3 +62,4 @@ rules:
   scss/dollar-variable-colon-space-after: always-single-line
   scss/function-calculation-no-interpolation: true
   scss/load-no-partial-leading-underscore: true
+  scss/property-no-unknown: true
