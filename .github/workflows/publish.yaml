@@ -9,7 +9,7 @@ on:
 jobs:
   publish:
     name: Publish
-    uses: jhae-de/jhae-de/.github/workflows/publish-node-package.yaml@main
+    uses: jhae-de/jhae-de/.github/workflows/node-package-publish.yaml@main
     with:
       needs-build: false
     secrets:
