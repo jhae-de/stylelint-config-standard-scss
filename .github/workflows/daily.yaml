@@ -1,0 +1,13 @@
+name: Daily
+run-name: Daily
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  test:
+    name: Test
+    uses: jhae-de/jhae-de/.github/workflows/node-project-test.yaml@main
+    with:
+      test-script: 'test'
