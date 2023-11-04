@@ -5,7 +5,7 @@ PROJECT_NAME ?= Project name
 COMPOSE_PROJECT_NAME ?= $(shell echo $(PROJECT_NAME) | sed 's/\(.*\)/\L\1/;s/[^[:alnum:]_-]/-/g')
 
 .DEFAULT_GOAL = help
-TARGET_DESCRIPTION_INDENTATION = 9
+TARGET_DESCRIPTION_INDENTATION = 12
 
 .PHONY: help
 help: ## Display this help
