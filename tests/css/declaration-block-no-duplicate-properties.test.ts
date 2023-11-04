@@ -8,29 +8,23 @@ RuleTest.describe(
     name: 'Disallow duplicate properties within declaration blocks',
     code: `
       test {
-        color: black;
-        color: white;
+        font-size: 16px;
+        font-size: 32px;
       }
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate "color"'],
+      messages: ['Unexpected duplicate "font-size"'],
       severities: ['error'],
     },
   },
   {
-    name: 'Disallow duplicate properties within declaration blocks',
+    name: 'Allow consecutive duplicate properties within declaration blocks with different syntaxes',
     code: `
       test {
-        color: black;
-        background: none;
-        color: white;
+        font-size: 16px;
+        font-size: 1rem;
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected duplicate "color"'],
-      severities: ['error'],
-    },
   },
 );
