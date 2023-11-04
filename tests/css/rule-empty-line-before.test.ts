@@ -7,17 +7,23 @@ RuleTest.describe(
   {
     name: 'Require an empty line before rules',
     code: 'a {} b {}',
-    expect: {
-      errored: true,
-      messages: ['Expected empty line before rule'],
-      severities: ['error'],
-    },
   },
   {
     name: 'Require an empty line before rules',
     code: `
       a {}
       b {}
+    `,
+  },
+  {
+    name: 'Require an empty line before rules always multi-line',
+    code: `
+      a {
+        color: black;
+      }
+      b {
+        color: white;
+      }
     `,
     expect: {
       errored: true,

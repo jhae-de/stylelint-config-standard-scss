@@ -4,9 +4,6 @@ plugins:
 extends:
   - stylelint-config-standard-scss
 rules:
-  at-rule-disallowed-list:
-    - import
-    - debug
   at-rule-empty-line-before:
     - always
     - except:
@@ -16,64 +13,32 @@ rules:
         - after-comment
       ignoreAtRules:
         - else
-  color-hex-length: long
-  color-named:
-    - never
-    - ignore:
-        - inside-function
   custom-media-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected custom media query name to be kebab-case (custom-media-pattern)
   custom-property-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected custom property name to be kebab-case (custom-property-pattern)
-  declaration-block-no-duplicate-properties: true
-  font-weight-notation: numeric
   keyframes-name-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected keyframe name to be kebab-case (keyframes-name-pattern)
-  property-no-unknown: null
-  rule-empty-line-before:
-    - always
-    - except:
-        - first-nested
-      ignore:
-        - after-comment
   selector-class-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected class selector to be kebab-case (selector-class-pattern)
   selector-id-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected id selector to be kebab-case (selector-id-pattern)
-  selector-max-id: 1
 
   # SCSS
-  scss/at-each-key-value-single-line: true
-  scss/at-function-named-arguments:
-    - always
-    - ignore:
-        - single-argument
   scss/at-function-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected function name to be kebab-case (scss/at-function-pattern)
-  scss/at-mixin-argumentless-call-parentheses: always
-  scss/at-mixin-named-arguments:
-    - always
-    - ignore:
-        - single-argument
   scss/at-mixin-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected mixin name to be kebab-case (scss/at-mixin-pattern)
-  scss/block-no-redundant-nesting: true
-  scss/dimension-no-non-numeric-values: true
-  scss/dollar-variable-colon-newline-after: always-multi-line
-  scss/dollar-variable-colon-space-after: always-single-line
   scss/dollar-variable-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected variable name to be kebab-case (scss/dollar-variable-pattern)
-  scss/function-calculation-no-interpolation: true
-  scss/load-no-partial-leading-underscore: true
   scss/percent-placeholder-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected placeholder name to be kebab-case (scss/percent-placeholder-pattern)
-  scss/property-no-unknown: true

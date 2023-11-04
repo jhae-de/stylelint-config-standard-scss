@@ -5,7 +5,7 @@ RuleTest.setConfigFile('index.yaml');
 RuleTest.describe(
   'scss/function-calculation-no-interpolation',
   {
-    name: 'Disallow interpolation in calculation functions',
+    name: 'Ignore interpolation in calculation functions',
     code: `
       $test: 1;
       
@@ -13,14 +13,9 @@ RuleTest.describe(
         width: calc(#{$test + 1});
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected interpolation in "calc".'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow interpolation in calculation functions',
+    name: 'Ignore interpolation in calculation functions',
     code: `
       $test: 1;
       
@@ -28,14 +23,9 @@ RuleTest.describe(
         width: calc(max(#{$c}));
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected interpolation in "max".'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow interpolation in calculation functions',
+    name: 'Ignore interpolation in calculation functions',
     code: `
       $test: 1;
       
@@ -43,14 +33,9 @@ RuleTest.describe(
         width: min(#{$c});
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected interpolation in "min".'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow interpolation in calculation functions',
+    name: 'Ignore interpolation in calculation functions',
     code: `
       $test: 1;
       
@@ -58,10 +43,5 @@ RuleTest.describe(
         width: clamp(#{$c} + 2px);
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected interpolation in "clamp".'],
-      severities: ['error'],
-    },
   },
 );
