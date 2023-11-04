@@ -7,7 +7,9 @@
 This config extends
 the [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss) shared config.
 
-To see the rules that this config uses, please read the [config itself](/index.yaml).
+To see the rules that this config uses, please read the [config itself](/index.yaml).  
+Basically, it just corrects the custom messages by adding the names of the rules to keep them consistent with all other
+messages.
 
 ## Installation
 

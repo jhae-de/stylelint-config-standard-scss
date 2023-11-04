@@ -7,6 +7,33 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-11-04
+
+With this release, all rules that overwrite one of the parent configurations are moved to
+the [stylelint-config-strict-scss](https://github.com/jhae-de/stylelint-config-strict-scss) shared config.
+
+### Removed
+
+- `at-rule-disallowed-list` rule
+- `color-hex-length` rule
+- `color-named` rule
+- `declaration-block-no-duplicate-properties` rule
+- `font-weight-notation` rule
+- `property-no-unknown` rule
+- `rule-empty-line-before` rule
+- `selector-max-id` rule
+- `scss/at-each-key-value-single-line` rule
+- `scss/at-function-named-arguments` rule
+- `scss/at-mixin-argumentless-call-parentheses` rule
+- `scss/at-mixin-named-arguments` rule
+- `scss/block-no-redundant-nesting` rule
+- `scss/dimension-no-non-numeric-values` rule
+- `scss/dollar-variable-colon-newline-after` rule
+- `scss/dollar-variable-colon-space-after` rule
+- `scss/function-calculation-no-interpolation` rule
+- `scss/load-no-partial-leading-underscore` rule
+- `scss/property-no-unknown` rule
+
 ## [1.2.0] - 2023-11-03
 
 ### Added
@@ -80,7 +107,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v1.2.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v2.0.0...main
+[2.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v2.0.0
 [1.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.2.0
 [1.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.1.0
 [1.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.0.0
