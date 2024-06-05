@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -12,8 +13,8 @@ RuleTest.describe(
     `,
     expect: {
       errored: true,
-      messages: new Array(2).fill('Unexpected unit'),
-      severities: new Array(2).fill('error'),
+      messages: new Array(2).fill('Unexpected unit') as string[],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {

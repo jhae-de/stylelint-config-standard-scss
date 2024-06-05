@@ -33,12 +33,21 @@ rules:
   scss/at-function-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected function name to be kebab-case (scss/at-function-pattern)
+  scss/at-mixin-no-risky-nesting-selector:
+    - true
+    - message: Unexpected nested parent selector in @mixin rule (scss/at-mixin-no-risky-nesting-selector)
   scss/at-mixin-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected mixin name to be kebab-case (scss/at-mixin-pattern)
+  scss/at-root-no-redundant:
+    - true
+    - message: Unexpected @at-root rule (scss/at-root-no-redundant)
   scss/dollar-variable-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected variable name to be kebab-case (scss/dollar-variable-pattern)
+  scss/no-unused-private-members:
+    - true
+    - message: Expected usage of private member within the stylesheet (scss/no-unused-private-members)
   scss/percent-placeholder-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected placeholder name to be kebab-case (scss/percent-placeholder-pattern)

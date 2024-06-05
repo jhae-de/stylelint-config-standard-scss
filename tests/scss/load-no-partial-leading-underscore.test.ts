@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -13,7 +14,7 @@ RuleTest.describe('scss/load-no-partial-leading-underscore', {
   `,
   expect: {
     errored: true,
-    messages: new Array(5).fill('Unexpected leading underscore in imported partial name'),
-    severities: new Array(5).fill('error'),
+    messages: new Array(5).fill('Unexpected leading underscore in imported partial name') as string[],
+    severities: new Array(5).fill('error') as Severity[],
   },
 });
