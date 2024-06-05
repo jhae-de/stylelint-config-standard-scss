@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -17,7 +18,7 @@ RuleTest.describe('scss/dollar-variable-colon-space-after', {
   `,
   expect: {
     errored: true,
-    messages: new Array(5).fill('Expected single space after ":"'),
-    severities: new Array(5).fill('error'),
+    messages: new Array(4).fill('Expected single space after ":" with a single-line value') as string[],
+    severities: new Array(4).fill('error') as Severity[],
   },
 });

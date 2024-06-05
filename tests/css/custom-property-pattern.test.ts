@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -22,8 +23,8 @@ RuleTest.describe(
     `,
     expect: {
       errored: true,
-      messages: new Array(10).fill('Expected custom property name to be kebab-case'),
-      severities: new Array(10).fill('error'),
+      messages: new Array(10).fill('Expected custom property name to be kebab-case') as string[],
+      severities: new Array(10).fill('error') as Severity[],
     },
   },
   {

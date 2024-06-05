@@ -75,12 +75,12 @@ RuleTest.describe(
     name: 'Disallow duplicate mixins within a stylesheet',
     code: `
       @mixin font-size {
-        color: blue;
+        font-size: 16px;
       }
       
-      .test {
+      test {
         @mixin font-size {
-          color: black;
+          font-size: 20px;
         }
         @include font-size;
       }

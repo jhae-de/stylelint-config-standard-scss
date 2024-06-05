@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -14,7 +15,7 @@ RuleTest.describe('scss/at-else-if-parentheses-space-before', {
   `,
   expect: {
     errored: true,
-    messages: new Array(2).fill('Expected a single space before parentheses in else-if declaration'),
-    severities: new Array(2).fill('error'),
+    messages: new Array(2).fill('Expected a single space before parentheses in else-if declaration') as string[],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

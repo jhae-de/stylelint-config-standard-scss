@@ -24,7 +24,7 @@ RuleTest.describe(
     name: 'Allow redundant nesting selectors',
     code: `
       test {
-        & .test {}
+        & test {}
       }
     `,
   },
@@ -32,7 +32,7 @@ RuleTest.describe(
     name: 'Allow redundant nesting selectors',
     code: `
       test {
-        & + .test {}
+        & + test {}
       }
     `,
   },

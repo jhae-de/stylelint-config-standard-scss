@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -10,7 +11,7 @@ RuleTest.describe('scss/at-import-partial-extension', {
   `,
   expect: {
     errored: true,
-    messages: new Array(2).fill('Unexpected extension ".scss" in @import'),
-    severities: new Array(2).fill('error'),
+    messages: new Array(2).fill('Unexpected extension ".scss" in @import') as string[],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

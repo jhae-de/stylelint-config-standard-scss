@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -12,7 +13,7 @@ RuleTest.describe('color-function-notation', {
   `,
   expect: {
     errored: true,
-    messages: new Array(4).fill('Expected modern color-function notation'),
-    severities: new Array(4).fill('error'),
+    messages: new Array(4).fill('Expected modern color-function notation') as string[],
+    severities: new Array(4).fill('error') as Severity[],
   },
 });

@@ -1,4 +1,5 @@
 import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { type Severity } from 'stylelint';
 
 RuleTest.setConfigFile('index.yaml');
 
@@ -12,7 +13,7 @@ RuleTest.describe('scss/dollar-variable-colon-space-before', {
   `,
   expect: {
     errored: true,
-    messages: new Array(2).fill('Unexpected whitespace before ":"'),
-    severities: new Array(2).fill('error'),
+    messages: new Array(2).fill('Unexpected whitespace before ":"') as string[],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });
