@@ -11,6 +11,7 @@ jobs:
     name: Publish
     uses: jhae-de/jhae-de/.github/workflows/node-package-publish.yaml@main
     with:
+      package-version: ${{ github.ref_name }}
       needs-build: false
     secrets:
       node-auth-token: ${{ secrets.NODE_AUTH_TOKEN }}
