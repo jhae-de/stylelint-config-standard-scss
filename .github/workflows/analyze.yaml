@@ -13,9 +13,12 @@ jobs:
   lint:
     name: Lint
     uses: jhae-de/jhae-de/.github/workflows/node-project-lint.yaml@main
+    with:
+      node-version: 20
 
   test:
     name: Test
     uses: jhae-de/jhae-de/.github/workflows/node-project-test.yaml@main
     with:
+      node-version: 20
       test-script: 'test'
