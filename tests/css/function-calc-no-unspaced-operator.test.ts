@@ -9,7 +9,7 @@ RuleTest.describe(
     code: 'test { top: calc(1px+2px); }',
     expect: {
       errored: true,
-      messages: ['Expected single space before "+" operator', 'Expected single space after "+" operator'],
+      messages: ['Expected single space after "+" operator', 'Expected single space before "+" operator'],
       severities: ['error', 'error'],
     },
   },
