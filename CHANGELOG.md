@@ -9,6 +9,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [3.0.0] - 2024-07-14
 
+### Changed
+
+- Updated dependencies
+  - `stylelint-scss@6.4.1`
+
 ### Removed
 
 - `scss/at-mixin-no-risky-nesting-selector` rule
