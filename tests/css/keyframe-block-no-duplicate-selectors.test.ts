@@ -3,7 +3,7 @@ import { RuleTest } from '@jhae/stylelint-rule-tester';
 RuleTest.setConfigFile('index.yaml');
 
 RuleTest.describe('keyframe-block-no-duplicate-selectors', {
-  name: 'Disallow duplicate selectors within keyframe blocks.',
+  name: 'Disallow duplicate selectors within keyframe blocks',
   code: `
     @keyframes foo {
       0% {}
