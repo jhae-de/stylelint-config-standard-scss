@@ -128,7 +128,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v2.1.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v3.0.0...main
+[3.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.0.0
 [2.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v2.1.0
 [2.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v2.0.0
 [1.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v1.2.0
