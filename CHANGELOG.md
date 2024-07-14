@@ -7,6 +7,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [3.0.0] - 2024-07-14
+
+### Removed
+
+- `scss/at-mixin-no-risky-nesting-selector` rule
+- `scss/at-root-no-redundant` rule
+- `scss/no-unused-private-members` rule
+
 ## [2.1.0] - 2024-06-18
 
 ### Changed

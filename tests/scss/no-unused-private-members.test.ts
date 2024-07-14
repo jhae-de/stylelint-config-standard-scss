@@ -5,7 +5,7 @@ RuleTest.setConfigFile('index.yaml');
 RuleTest.describe(
   'scss/no-unused-private-members',
   {
-    name: 'Disallow unused private members',
+    name: 'Allow unused private members',
     code: `
       @function _function1() {}
       @function _function2() {}
@@ -14,14 +14,9 @@ RuleTest.describe(
         width: _function1();
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Expected usage of private member within the stylesheet'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow unused private members',
+    name: 'Allow unused private members',
     code: `
       @mixin _mixin1 {}
       @mixin mixin2 {}
@@ -30,14 +25,9 @@ RuleTest.describe(
         @include mixin2;
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Expected usage of private member within the stylesheet'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow unused private members',
+    name: 'Allow unused private members',
     code: `
       $variable1: 0;
       $-variable2: 0;
@@ -46,14 +36,9 @@ RuleTest.describe(
         width: $variable1;
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Expected usage of private member within the stylesheet'],
-      severities: ['error'],
-    },
   },
   {
-    name: 'Disallow unused private members',
+    name: 'Allow unused private members',
     code: `
       %-placeholder1:hover {}
       test.%placeholder2 {}
@@ -63,10 +48,5 @@ RuleTest.describe(
         width: 0;
       }
     `,
-    expect: {
-      errored: true,
-      messages: ['Expected usage of private member within the stylesheet'],
-      severities: ['error'],
-    },
   },
 );
