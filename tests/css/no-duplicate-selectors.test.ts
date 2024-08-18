@@ -93,7 +93,7 @@ RuleTest.describe(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate selector "a b", first used at line 2'],
+      messages: ['Unexpected duplicate selector "& b", first used at line 2'],
       severities: ['error'],
     },
   },
