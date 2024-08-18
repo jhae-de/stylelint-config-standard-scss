@@ -7,8 +7,8 @@ RuleTest.describe(
   {
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
-      b a {}
-      a {}
+      b a { color: black; }
+      a { color: white; }
     `,
     expect: {
       errored: true,
@@ -19,8 +19,8 @@ RuleTest.describe(
   {
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
-      a + a {}
-      a {}
+      a + a { color: black; }
+      a { color: white; }
     `,
     expect: {
       errored: true,
@@ -31,8 +31,8 @@ RuleTest.describe(
   {
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
-      b > a[foo] {}
-      a[foo] {}
+      b > a[foo] { color: black; }
+      a[foo] { color: white; }
     `,
     expect: {
       errored: true,
@@ -44,9 +44,9 @@ RuleTest.describe(
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
       a {
-        & > b {}
+        & > b { color: black; }
       }
-      b {}
+      b { color: white; }
     `,
     expect: {
       errored: true,
@@ -58,8 +58,8 @@ RuleTest.describe(
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
       @media print {
-        #c a {}
-        a {}
+        #c a { color: black; }
+        a { color: white; }
       }
     `,
     expect: {
@@ -71,11 +71,11 @@ RuleTest.describe(
   {
     name: 'Disallow selectors of lower specificity from coming after overriding selectors of higher specificity',
     code: `
-      b a {}
-      h1 {}
-      h2 {}
-      h3 {}
-      a {}
+      b a { color: black; }
+      h1 { color: gray; }
+      h2 { color: gray; }
+      h3 { color: gray; }
+      a { color: white; }
     `,
     expect: {
       errored: true,
