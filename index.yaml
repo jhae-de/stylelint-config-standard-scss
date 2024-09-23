@@ -36,6 +36,10 @@ rules:
   scss/at-mixin-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected mixin name to be kebab-case (scss/at-mixin-pattern)
+  scss/at-rule-no-unknown:
+    - true
+    - ignoreAtRules:
+        - tailwind
   scss/dollar-variable-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected variable name to be kebab-case (scss/dollar-variable-pattern)
