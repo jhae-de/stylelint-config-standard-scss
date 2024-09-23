@@ -13,7 +13,7 @@ messages.
 
 ## Installation
 
-```bash
+```shell
 npm install --save-dev @jhae/stylelint-config-standard-scss
 ```
 
