@@ -15,7 +15,7 @@
   "main": "index.yaml",
   "scripts": {
     "lint": "npm run-script lint:prettier && npm run-script lint:eslint",
-    "lint:prettier": "prettier --ignore-path .gitignore --check .",
+    "lint:prettier": "prettier . --check",
     "lint:eslint": "eslint .",
     "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
     "test:watch": "npm run-script test -- --watchAll"
