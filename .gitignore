@@ -4,5 +4,5 @@
 # Project
 /coverage/
 /node_modules/
-/.bash_history
+/.bash-history
 /.env
