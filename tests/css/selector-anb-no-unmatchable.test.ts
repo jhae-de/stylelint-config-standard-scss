@@ -9,7 +9,7 @@ RuleTest.describe(
     code: 'div:nth-child(0) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-child"'],
+      messages: ['Unexpected unmatchable An+B selector ":nth-child(0)"'],
       severities: ['error'],
     },
   },
@@ -18,7 +18,7 @@ RuleTest.describe(
     code: 'div:nth-last-child(0n) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-last-child"'],
+      messages: ['Unexpected unmatchable An+B selector ":nth-last-child(0n)"'],
       severities: ['error'],
     },
   },
@@ -27,7 +27,7 @@ RuleTest.describe(
     code: 'div:nth-of-type(0n+0) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-of-type"'],
+      messages: ['Unexpected unmatchable An+B selector ":nth-of-type(0n+0)"'],
       severities: ['error'],
     },
   },
@@ -36,7 +36,7 @@ RuleTest.describe(
     code: 'div:nth-last-of-type(0 of a) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-last-of-type"'],
+      messages: ['Unexpected unmatchable An+B selector ":nth-last-of-type(0 of a)"'],
       severities: ['error'],
     },
   },

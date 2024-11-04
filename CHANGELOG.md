@@ -26,14 +26,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Updated dependencies
-  - `stylelint-scss@6.5.0`
+  - `stylelint-scss@^6.5.0`
 
 ## [3.0.0] - 2024-07-14
 
 ### Changed
 
 - Updated dependencies
-  - `stylelint-scss@6.4.1`
+  - `stylelint-scss@^6.4.1`
 
 ### Removed
 
@@ -46,8 +46,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Updated dependencies
-  - `stylelint-config-standard-scss@13.1.0`
-  - `stylelint-scss@6.3.1`
+  - `stylelint-config-standard-scss@^13.1.0`
+  - `stylelint-scss@^6.3.1`
 
 ## [2.0.0] - 2023-11-04
 
