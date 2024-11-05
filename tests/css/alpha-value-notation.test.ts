@@ -5,7 +5,7 @@ RuleTest.setConfigFile('index.yaml');
 RuleTest.describe(
   'alpha-value-notation',
   {
-    name: 'Require percentage notation for alpha-values',
+    name: 'Require percentage notation for alpha values',
     code: 'test { color: rgb(0 0 0 / 0.5); }',
     expect: {
       errored: true,
@@ -14,7 +14,7 @@ RuleTest.describe(
     },
   },
   {
-    name: 'Require percentage notation for alpha-values except properties',
+    name: 'Require percentage notation for alpha values except properties',
     code: `
       test {
         opacity: 0.5;
