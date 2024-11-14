@@ -4,15 +4,6 @@ plugins:
 extends:
   - stylelint-config-standard-scss
 rules:
-  at-rule-empty-line-before:
-    - always
-    - except:
-        - blockless-after-same-name-blockless
-        - first-nested
-      ignore:
-        - after-comment
-      ignoreAtRules:
-        - else
   custom-media-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected custom media query name to be kebab-case (custom-media-pattern)

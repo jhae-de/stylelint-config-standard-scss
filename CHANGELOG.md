@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] - 2024-11-24
+
+### Removed
+
+- `at-rule-empty-line-before` rule  
+  This rule has been removed in favor of its definition in the `stylelint-config-standard-scss` configuration.
+
 ## [3.2.1] - 2024-10-10
 
 ### Changed
@@ -170,7 +177,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v3.2.1...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.0.0...main
+[4.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.0.0
 [3.2.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.2.1
 [3.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.2.0
 [3.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.1.0
