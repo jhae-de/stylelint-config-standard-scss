@@ -26,23 +26,26 @@ RuleTest.describe(
     },
   },
   {
-    name: 'Require an empty line before at-rules except blockless after same name blockless',
+    name: 'Require an empty line before at-rules except blockless after blockless',
     code: `
-      @import "a.scss";
-      @import "b.scss";
+      @use "a.scss";
+      @use "b.scss";
+      @forward "c.scss";
       
-      @media print {}
+      @media {}
+      
+      @media {}
     `,
   },
   {
     name: 'Require an empty line before at-rules except first nested',
     code: `
-      a {
+      test {
         @extend foo;
         color: black;
       }
       
-      b {
+      test {
         color: black;
         
         @extend foo;
