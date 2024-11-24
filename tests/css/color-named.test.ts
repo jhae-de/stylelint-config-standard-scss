@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('color-named', {
+new ConfigVerifier('index.yaml').verify('color-named', {
   name: 'Ignore named colors',
   code: `
     test {

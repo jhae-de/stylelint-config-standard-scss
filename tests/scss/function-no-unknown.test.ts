@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/function-no-unknown', {
+new ConfigVerifier('index.yaml').verify('scss/function-no-unknown', {
   name: 'Allow unknown functions',
   code: 'test { transform: unknown(1); }',
 });

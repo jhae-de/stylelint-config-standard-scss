@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('selector-attribute-quotes', {
+new ConfigVerifier('index.yaml').verify('selector-attribute-quotes', {
   name: 'Require quotes for attribute values',
   code: `
     [title=test] {}

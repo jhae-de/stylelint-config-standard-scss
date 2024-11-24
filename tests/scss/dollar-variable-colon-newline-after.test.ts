@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dollar-variable-colon-newline-after', {
+new ConfigVerifier('index.yaml').verify('scss/dollar-variable-colon-newline-after', {
   name: 'Ignore a newline after the colon in $-variable declarations',
   code: `
     $test: 100px;

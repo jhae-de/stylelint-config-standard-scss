@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('hue-degree-notation', {
+new ConfigVerifier('index.yaml').verify('hue-degree-notation', {
   name: 'Require angle notation for degree hues',
   code: `
     test {

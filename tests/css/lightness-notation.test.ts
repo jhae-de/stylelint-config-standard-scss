@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('lightness-notation', {
+new ConfigVerifier('index.yaml').verify('lightness-notation', {
   name: 'Require percentage notation for lightness',
   code: `
     test { color: lab(0.5 0.5 128); }

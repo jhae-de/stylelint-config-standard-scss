@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('value-keyword-case', {
+new ConfigVerifier('index.yaml').verify('value-keyword-case', {
   name: 'Allow only lowercase keyword values',
   code: `
     test { display: Block; }

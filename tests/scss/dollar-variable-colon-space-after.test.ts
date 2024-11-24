@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dollar-variable-colon-space-after', {
+new ConfigVerifier('index.yaml').verify('scss/dollar-variable-colon-space-after', {
   name: 'Require a space after the colon in $-variable declarations',
   code: `
     $test:1;

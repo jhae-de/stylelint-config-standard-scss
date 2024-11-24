@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-use-no-unnamespaced', {
+new ConfigVerifier('index.yaml').verify('scss/at-use-no-unnamespaced', {
   name: 'Allow usage of @use without a namespace',
   code: '@use "foo" as *;',
 });

@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('no-unknown-custom-media', {
+new ConfigVerifier('index.yaml').verify('no-unknown-custom-media', {
   name: 'Allow unknown custom media',
   code: `
     @custom-media --test (min-width: 0);

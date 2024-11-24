@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/load-no-partial-leading-underscore', {
+new ConfigVerifier('index.yaml').verify('scss/load-no-partial-leading-underscore', {
   name: 'Disallow leading underscore in partial names',
   code: `
     @import "_test";

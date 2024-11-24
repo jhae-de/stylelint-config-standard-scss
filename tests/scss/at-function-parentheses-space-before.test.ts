@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-function-parentheses-space-before', {
+new ConfigVerifier('index.yaml').verify('scss/at-function-parentheses-space-before', {
   name: 'Disallow a space before @function parentheses',
   code: '@function test ($arg) {}',
   expect: {

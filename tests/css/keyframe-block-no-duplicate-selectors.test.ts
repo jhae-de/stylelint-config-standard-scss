@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('keyframe-block-no-duplicate-selectors', {
+new ConfigVerifier('index.yaml').verify('keyframe-block-no-duplicate-selectors', {
   name: 'Disallow duplicate selectors within keyframe blocks',
   code: `
     @keyframes foo {

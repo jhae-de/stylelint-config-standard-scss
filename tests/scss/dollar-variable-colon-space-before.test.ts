@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dollar-variable-colon-space-before', {
+new ConfigVerifier('index.yaml').verify('scss/dollar-variable-colon-space-before', {
   name: 'Disallow a space before the colon in $-variables',
   code: `
     $test-1 : 1;

@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/function-quote-no-quoted-strings-inside', {
+new ConfigVerifier('index.yaml').verify('scss/function-quote-no-quoted-strings-inside', {
   name: 'Disallow quoted strings inside the quote function',
   code: `
     $test: 'Helvetica';

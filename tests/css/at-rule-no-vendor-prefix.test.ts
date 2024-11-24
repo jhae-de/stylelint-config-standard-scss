@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('at-rule-no-vendor-prefix', {
+new ConfigVerifier('index.yaml').verify('at-rule-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for at-rules',
   code: '@-webkit-keyframes {}',
   expect: {

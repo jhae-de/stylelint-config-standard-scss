@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/no-duplicate-dollar-variables', {
+new ConfigVerifier('index.yaml').verify('scss/no-duplicate-dollar-variables', {
   name: 'Allow duplicate dollar variables within a stylesheet',
   code: `
     $test: 1;

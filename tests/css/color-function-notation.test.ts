@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('color-function-notation', {
+new ConfigVerifier('index.yaml').verify('color-function-notation', {
   name: 'Require modern notation for color-functions',
   code: `
     test { color: rgb(0, 0, 0); }

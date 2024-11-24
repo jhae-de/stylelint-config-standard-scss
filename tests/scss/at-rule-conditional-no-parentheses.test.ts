@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-rule-conditional-no-parentheses', {
+new ConfigVerifier('index.yaml').verify('scss/at-rule-conditional-no-parentheses', {
   name: 'Disallow parentheses in conditional at-rules',
   code: `
     test {

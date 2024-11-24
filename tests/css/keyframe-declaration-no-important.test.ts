@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('keyframe-declaration-no-important', {
+new ConfigVerifier('index.yaml').verify('keyframe-declaration-no-important', {
   name: 'Disallow invalid !important within keyframe declarations',
   code: `
       @keyframes foo {

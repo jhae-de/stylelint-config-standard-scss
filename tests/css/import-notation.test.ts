@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('import-notation', {
+new ConfigVerifier('index.yaml').verify('import-notation', {
   name: 'Require string notation for @import rules',
   code: `@import url('test-1.css');`,
   expect: {

@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('color-hex-length', {
+new ConfigVerifier('index.yaml').verify('color-hex-length', {
   name: 'Disallow long notation for hex colors',
   code: `
     test {

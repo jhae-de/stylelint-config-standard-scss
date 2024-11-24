@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-use-no-redundant-alias', {
+new ConfigVerifier('index.yaml').verify('scss/at-use-no-redundant-alias', {
   name: 'Allow redundant namespace aliases',
   code: `
     @use "foo" as foo;
