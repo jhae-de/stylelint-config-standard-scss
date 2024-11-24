@@ -7,9 +7,7 @@
 This config extends
 the [stylelint-config-standard-scss](https://github.com/stylelint-scss/stylelint-config-standard-scss) shared config.
 
-To see the rules that this config uses, please read the [config itself](index.yaml).  
-Basically, it just corrects the custom messages by adding the names of the rules to keep them consistent with all other
-messages.
+To see the rules that this config uses, please read the [config itself](index.yaml).
 
 ## Installation
 
@@ -21,9 +19,10 @@ npm install --save-dev @jhae/stylelint-config-standard-scss
 
 Set your Stylelint config to:
 
-```yaml
-extends:
-  - '@jhae/stylelint-config-standard-scss'
+```json
+{
+  "extends": "@jhae/stylelint-config-standard-scss"
+}
 ```
 
 Please refer to the [Stylelint documentation](https://stylelint.io) to find out how to use the linter and customize this
