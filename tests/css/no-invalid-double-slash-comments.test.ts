@@ -1,10 +1,8 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
-
-RuleTest.setConfigFile('index.yaml');
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
 // Double-slash comments are valid in scss.
 
-RuleTest.describe(
+new ConfigVerifier('index.yaml').verify(
   'no-invalid-double-slash-comments',
   {
     name: 'Allow invalid double-slash comments',

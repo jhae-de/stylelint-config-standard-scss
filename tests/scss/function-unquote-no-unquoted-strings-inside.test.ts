@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/function-unquote-no-unquoted-strings-inside', {
+new ConfigVerifier('index.yaml').verify('scss/function-unquote-no-unquoted-strings-inside', {
   name: 'Disallow unquoted strings inside the unquote function',
   code: `
     $test: Helvetica;

@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dollar-variable-first-in-block', {
+new ConfigVerifier('index.yaml').verify('scss/dollar-variable-first-in-block', {
   name: 'Do not require $-variable declarations to be placed first in a block',
   code: `
     @import "test.css";

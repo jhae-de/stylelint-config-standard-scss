@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/double-slash-comment-whitespace-inside', {
+new ConfigVerifier('index.yaml').verify('scss/double-slash-comment-whitespace-inside', {
   name: 'Require whitespace after the // in //-comments',
   code: '//Comment',
   expect: {

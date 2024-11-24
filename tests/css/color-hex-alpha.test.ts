@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('color-hex-alpha', {
+new ConfigVerifier('index.yaml').verify('color-hex-alpha', {
   name: 'Ignore alpha channel for hex colors',
   code: `
     test { color: #fff; }

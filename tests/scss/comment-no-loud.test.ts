@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/comment-no-loud', {
+new ConfigVerifier('index.yaml').verify('scss/comment-no-loud', {
   name: 'Allow /*-comments',
   code: `
     /* Comment */

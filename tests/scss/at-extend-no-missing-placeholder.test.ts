@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-extend-no-missing-placeholder', {
+new ConfigVerifier('index.yaml').verify('scss/at-extend-no-missing-placeholder', {
   name: 'Disallow "@extend" with missing placeholder',
   code: `
     test {

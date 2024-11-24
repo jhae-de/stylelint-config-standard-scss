@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/comment-no-empty', {
+new ConfigVerifier('index.yaml').verify('scss/comment-no-empty', {
   name: 'Disallow empty comments',
   code: `
     /**/

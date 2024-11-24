@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe(
+new ConfigVerifier('index.yaml').verify(
   'scss/percent-placeholder-pattern',
   {
     name: 'Require kebab-case for placeholder names',

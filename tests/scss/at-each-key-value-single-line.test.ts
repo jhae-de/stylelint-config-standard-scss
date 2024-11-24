@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe(
+new ConfigVerifier('index.yaml').verify(
   'scss/at-each-key-value-single-line',
   {
     name: 'Ignore "@each $key in map-keys($map)" with "map-get($map, $key)"',

@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe(
+new ConfigVerifier('index.yaml').verify(
   'font-family-name-quotes',
   {
     name: 'Require quotes for font family names where recommended',

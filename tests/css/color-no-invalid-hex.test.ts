@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('color-no-invalid-hex', {
+new ConfigVerifier('index.yaml').verify('color-no-invalid-hex', {
   name: 'Disallow invalid hex colors',
   code: `
     test { color: #00; }

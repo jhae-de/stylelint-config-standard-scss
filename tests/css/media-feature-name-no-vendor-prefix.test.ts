@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('media-feature-name-no-vendor-prefix', {
+new ConfigVerifier('index.yaml').verify('media-feature-name-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for media feature names',
   code: `
     @media (-webkit-min-device-pixel-ratio: 1) {}

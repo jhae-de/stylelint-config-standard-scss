@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('value-no-vendor-prefix', {
+new ConfigVerifier('index.yaml').verify('value-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for values',
   code: `
     test { display: -webkit-flex; }

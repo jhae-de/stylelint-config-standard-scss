@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/no-global-function-names', {
+new ConfigVerifier('index.yaml').verify('scss/no-global-function-names', {
   name: 'Disallow the use of global function names',
   code: 'test { background: adjust-color(#000000, $red: 10); }',
   expect: {

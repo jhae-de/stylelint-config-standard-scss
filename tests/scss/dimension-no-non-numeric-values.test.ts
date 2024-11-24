@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dimension-no-non-numeric-values', {
+new ConfigVerifier('index.yaml').verify('scss/dimension-no-non-numeric-values', {
   name: 'Ignore non-numeric values when interpolating a value with a unit',
   code: 'test { padding: #{test}px; }',
 });

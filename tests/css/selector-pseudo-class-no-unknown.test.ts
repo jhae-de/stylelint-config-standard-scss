@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('selector-pseudo-class-no-unknown', {
+new ConfigVerifier('index.yaml').verify('selector-pseudo-class-no-unknown', {
   name: 'Disallow unknown pseudo-class selectors',
   code: `
     div:unknown {}

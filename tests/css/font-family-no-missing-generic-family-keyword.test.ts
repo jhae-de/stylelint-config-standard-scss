@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('font-family-no-missing-generic-family-keyword', {
+new ConfigVerifier('index.yaml').verify('font-family-no-missing-generic-family-keyword', {
   name: 'Disallow a missing generic family keyword within font families',
   code: `
     test { font-family: Helvetica, Arial, Verdana, Tahoma; }

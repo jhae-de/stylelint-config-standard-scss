@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('font-weight-notation', {
+new ConfigVerifier('index.yaml').verify('font-weight-notation', {
   name: 'Ignore numeric or named font-weight values',
   code: `
     test {

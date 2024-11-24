@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('selector-pseudo-element-colon-notation', {
+new ConfigVerifier('index.yaml').verify('selector-pseudo-element-colon-notation', {
   name: 'Require double colon notation for applicable pseudo-element selectors',
   code: 'div:before { color: black; }',
   expect: {

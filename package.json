@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15",
-    "@jhae/stylelint-rule-tester": "^1.5",
+    "@jhae/stylelint-config-verifier": "^1.0",
     "@tsconfig/node20": "^20.1",
     "@types/jest": "^29.5",
     "eslint": "^9.15",

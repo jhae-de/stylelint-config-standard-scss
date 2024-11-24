@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('media-feature-name-no-unknown', {
+new ConfigVerifier('index.yaml').verify('media-feature-name-no-unknown', {
   name: 'Disallow unknown media feature names',
   code: `
     @media screen and (unknown) {}

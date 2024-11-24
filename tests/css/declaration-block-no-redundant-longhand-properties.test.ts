@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('declaration-block-no-redundant-longhand-properties', {
+new ConfigVerifier('index.yaml').verify('declaration-block-no-redundant-longhand-properties', {
   name: 'Disallow redundant longhand properties within declaration-block',
   code: `
     test {

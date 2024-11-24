@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/dollar-variable-default', {
+new ConfigVerifier('index.yaml').verify('scss/dollar-variable-default', {
   name: 'Do not require !default flag for $-variable declarations',
   code: '$test: 1',
 });

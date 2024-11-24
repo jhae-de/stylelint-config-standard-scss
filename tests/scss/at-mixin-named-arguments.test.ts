@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-mixin-named-arguments', {
+new ConfigVerifier('index.yaml').verify('scss/at-mixin-named-arguments', {
   name: 'Ignore named arguments in mixin calls',
   code: `
     test {

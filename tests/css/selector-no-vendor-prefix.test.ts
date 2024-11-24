@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('selector-no-vendor-prefix', {
+new ConfigVerifier('index.yaml').verify('selector-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for selectors',
   code: `
     input::-moz-placeholder {}

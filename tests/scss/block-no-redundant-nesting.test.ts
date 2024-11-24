@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/block-no-redundant-nesting', {
+new ConfigVerifier('index.yaml').verify('scss/block-no-redundant-nesting', {
   name: 'Ignore nesting a single block if it could be merged with its parent block',
   code: `
     .foo {

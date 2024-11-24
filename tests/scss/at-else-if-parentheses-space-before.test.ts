@@ -1,9 +1,7 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 import { type Severity } from 'stylelint';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('scss/at-else-if-parentheses-space-before', {
+new ConfigVerifier('index.yaml').verify('scss/at-else-if-parentheses-space-before', {
   name: 'Require a space before @else if parentheses',
   code: `
     test {

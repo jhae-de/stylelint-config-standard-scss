@@ -1,8 +1,6 @@
-import { RuleTest } from '@jhae/stylelint-rule-tester';
+import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
-RuleTest.setConfigFile('index.yaml');
-
-RuleTest.describe('declaration-property-value-no-unknown', {
+new ConfigVerifier('index.yaml').verify('declaration-property-value-no-unknown', {
   name: 'Allow unknown values for properties within declarations',
   code: `
     test {
