@@ -5,35 +5,43 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
 ## [3.2.1] - 2024-10-10
 
 ### Changed
 
-- Added required dependencies
-- Updated dependencies
+- Added missing required dependencies
 
 ## [3.2.0] - 2024-09-24
 
 ### Changed
 
-- `scss/at-rule-no-unknown` rule
-  - Added `@tailwind` to ignored at-rules
+- `scss/at-rule-no-unknown` rule  
+  Added `@tailwind` to ignored at-rules
+- Bumped `stylelint-scss` from `6.5.0` to `6.7.0`  
+  Release notes:
+  [6.5.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.5.1) |
+  [6.6.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.6.0) |
+  [6.7.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.7.0)
 
 ## [3.1.0] - 2024-08-18
 
 ### Changed
 
-- Updated dependencies
-  - `stylelint-scss@^6.5.0`
+- Bumped `stylelint-scss` from `6.4.1` to `6.5.0`  
+  Release notes: [6.5.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.5.0)
 
 ## [3.0.0] - 2024-07-14
 
+With this release, all rules that overwrite one of the parent configurations are moved to
+the [stylelint-config-strict-scss](https://github.com/jhae-de/stylelint-config-strict-scss) shared config.
+
 ### Changed
 
-- Updated dependencies
-  - `stylelint-scss@^6.4.1`
+- Bumped `stylelint-scss` from `6.3.1` to `6.4.1`  
+  Release notes:
+  [6.3.2](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.3.2) |
+  [6.4.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.4.0) |
+  [6.4.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.4.1)
 
 ### Removed
 
@@ -43,11 +51,29 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [2.1.0] - 2024-06-18
 
+### Added
+
+- `scss/at-mixin-no-risky-nesting-selector` rule
+- `scss/at-root-no-redundant` rule
+- `scss/no-unused-private-members` rule
+
 ### Changed
 
-- Updated dependencies
-  - `stylelint-config-standard-scss@^13.1.0`
-  - `stylelint-scss@^6.3.1`
+- Bumped `stylelint-config-standard-scss` from `11.1.0` to `13.1.0`  
+  Release notes:
+  [12.0.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v12.0.0) |
+  [13.0.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v13.0.0) |
+  [13.1.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v13.1.0)
+- Bumped `stylelint-scss` from `5.3.0` to `6.3.1`  
+  Release notes:
+  [5.3.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v5.3.1) |
+  [5.3.2](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v5.3.2) |
+  [6.0.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.0.0) |
+  [6.1.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.1.0) |
+  [6.2.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.2.0) |
+  [6.2.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.2.1) |
+  [6.3.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.3.0) |
+  [6.3.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.3.1)
 
 ## [2.0.0] - 2023-11-04
 
@@ -80,7 +106,6 @@ the [stylelint-config-strict-scss](https://github.com/jhae-de/stylelint-config-s
 
 ### Added
 
-- `stylelint-scss` dependency
 - `color-named` rule
 - `declaration-block-no-duplicate-properties` rule
 - `font-weight-notation` rule
@@ -94,20 +119,16 @@ the [stylelint-config-strict-scss](https://github.com/jhae-de/stylelint-config-s
 
 ### Changed
 
-- Updated dependencies
-  - `@types/jest`
-  - `@typescript-eslint/eslint-plugin`
-  - `@typescript-eslint/parser`
-- `at-rule-empty-line-before` rule
-  - Replaced `blockless-after-blockless` with `blockless-after-same-name-blockless`
-- `rule-empty-line-before` rule
-  - Replaced `always-multi-line` with `always`
-- `property-no-unknown` rule
-  - Disabled rule in favor of `scss/property-no-unknown` rule
+- `at-rule-empty-line-before` rule  
+  Replaced `blockless-after-blockless` with `blockless-after-same-name-blockless`
+- `rule-empty-line-before` rule  
+  Replaced `always-multi-line` with `always`
+- `property-no-unknown` rule  
+  Disabled the rule in favor of the `scss/property-no-unknown` rule
 
 ### Fixed
 
-- Added rule name to custom messages of
+- Added the rule name to the custom messages of
   - `custom-media-pattern` rule
   - `custom-property-pattern` rule
   - `keyframes-name-pattern` rule
@@ -124,11 +145,11 @@ the [stylelint-config-strict-scss](https://github.com/jhae-de/stylelint-config-s
 
 The following rules have been removed as they are already part of one of the extended configurations.
 
-- scss/at-extend-no-missing-placeholder
-- scss/comment-no-empty
-- scss/function-quote-no-quoted-strings-inside
-- scss/function-unquote-no-unquoted-strings-inside
-- scss/no-global-function-names
+- `scss/at-extend-no-missing-placeholder` rule
+- `scss/comment-no-empty` rule
+- `scss/function-quote-no-quoted-strings-inside` rule
+- `scss/function-unquote-no-unquoted-strings-inside` rule
+- `scss/no-global-function-names` rule
 
 ## [1.0.0] - 2023-10-22
 
