@@ -12,11 +12,23 @@ new ConfigVerifier('index.yaml').verify(
     },
   },
   {
-    name: 'Allow unknown @tailwind at-rule',
+    name: 'Allow Tailwind CSS at-rules',
     code: `
+      @config "./tailwind.config.ts";
+      
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
+      
+      @layer base {
+        test {
+          @apply bg-white text-black;
+        }
+      }
+      
+      @responsive {}
+      @screen sm {}
+      @variants hover {}
     `,
   },
 );

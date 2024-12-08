@@ -5,7 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.1.0] - 2024-12-08
+
+### Changed
+
+- `scss/at-rule-no-unknown` rule  
+  Added Tailwind CSS at-rules to ignored at-rules
+  - `@apply`
+  - `@config`
+  - `@layer`
+  - `@responsive`
+  - `@screen`
+  - `@variants`
+- Bumped `stylelint-config-standard-scss` from `13.1.0` to `14.0.0`  
+  Release notes: [14.0.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v14.0.0)
+- Bumped `stylelint` from `16.6.1` to `16.11.0`  
+  Release notes:
+  [16.7.0](https://github.com/stylelint/stylelint/releases/tag/16.7.0) |
+  [16.8.0](https://github.com/stylelint/stylelint/releases/tag/16.8.0) |
+  [16.8.1](https://github.com/stylelint/stylelint/releases/tag/16.8.1) |
+  [16.8.2](https://github.com/stylelint/stylelint/releases/tag/16.8.2) |
+  [16.9.0](https://github.com/stylelint/stylelint/releases/tag/16.9.0) |
+  [16.10.0](https://github.com/stylelint/stylelint/releases/tag/16.10.0) |
+  [16.11.0](https://github.com/stylelint/stylelint/releases/tag/16.11.0)
+- Bumped `stylelint-scss` from `6.3.0` to `6.4.0`  
+  Release notes:
+  [6.3.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.3.1) |
+  [6.3.2](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.3.2) |
+  [6.4.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.4.0)
+
 ## [4.0.0] - 2024-11-24
+
+### Changed
+
+- Set minimum required `stylelint` version to `16.6.1`
+- Set minimum required `stylelint-scss` version to `6.3.0`
 
 ### Removed
 
@@ -177,7 +211,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.0.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.1.0...main
+[4.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.1.0
 [4.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.0.0
 [3.2.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.2.1
 [3.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.2.0
