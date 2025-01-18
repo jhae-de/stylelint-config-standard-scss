@@ -8,7 +8,10 @@ new ConfigVerifier('index.yaml').verify('selector-no-vendor-prefix', {
   `,
   expect: {
     errored: true,
-    messages: ['Unexpected vendor-prefix "::-moz-placeholder"', 'Unexpected vendor-prefix ":-webkit-full-screen"'],
+    messages: [
+      'Unexpected vendor-prefixed selector "::-moz-placeholder"',
+      'Unexpected vendor-prefixed selector ":-webkit-full-screen"',
+    ],
     severities: ['error', 'error'],
   },
 });

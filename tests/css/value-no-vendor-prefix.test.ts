@@ -8,7 +8,10 @@ new ConfigVerifier('index.yaml').verify('value-no-vendor-prefix', {
   `,
   expect: {
     errored: true,
-    messages: ['Unexpected vendor-prefix "-webkit-flex"', 'Unexpected vendor-prefix "-webkit-linear-gradient"'],
+    messages: [
+      'Unexpected vendor-prefixed value "-webkit-flex"',
+      'Unexpected vendor-prefixed value "-webkit-linear-gradient"',
+    ],
     severities: ['error', 'error'],
   },
 });
