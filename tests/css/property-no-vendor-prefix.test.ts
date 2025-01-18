@@ -10,7 +10,10 @@ new ConfigVerifier('index.yaml').verify('property-no-vendor-prefix', {
   `,
   expect: {
     errored: true,
-    messages: ['Unexpected vendor-prefix "-webkit-transform"', 'Unexpected vendor-prefix "-moz-columns"'],
+    messages: [
+      'Unexpected vendor-prefixed property "-webkit-transform"',
+      'Unexpected vendor-prefixed property "-moz-columns"',
+    ],
     severities: ['error', 'error'],
   },
 });
