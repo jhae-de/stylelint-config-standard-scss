@@ -6,7 +6,7 @@ new ConfigVerifier('index.yaml').verify(
     name: 'Disallow invalid position @import rules',
     code: `
       test {}
-      @import 'test.css';
+      @import "test.css";
     `,
     expect: {
       errored: true,
@@ -18,7 +18,7 @@ new ConfigVerifier('index.yaml').verify(
     name: 'Disallow invalid position @import rules',
     code: `
       @media print {}
-      @import 'test.css';
+      @import "test.css";
     `,
     expect: {
       errored: true,

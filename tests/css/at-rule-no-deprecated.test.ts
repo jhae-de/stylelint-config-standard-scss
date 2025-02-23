@@ -1,7 +1,7 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
 
 new ConfigVerifier('index.yaml').verify('at-rule-no-deprecated', {
-  name: 'Allow deprecated at-rules.',
+  name: 'Allow deprecated at-rules',
   code: `
     test {
       @apply test;

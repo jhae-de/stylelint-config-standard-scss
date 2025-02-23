@@ -6,7 +6,7 @@ new ConfigVerifier('index.yaml').verify(
     name: 'Ignore empty lines after $-variable declarations',
     code: `
       $test: 200px;
-      @import 'test.css';
+      @import "test.css";
     `,
   },
   {
