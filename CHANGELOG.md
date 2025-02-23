@@ -7,10 +7,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
 - Bumped `stylelint` from `16.11.0` to `16.13.0`  
   Release notes:
   [16.12.0](https://github.com/stylelint/stylelint/releases/tag/16.12.0) |
   [16.13.0](https://github.com/stylelint/stylelint/releases/tag/16.13.0)
+- Bumped `stylelint-scss` from `6.4.0` to `6.11.0`  
+  Release notes:
+  [6.4.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.4.1) |
+  [6.5.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.5.0) |
+  [6.5.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.5.1) |
+  [6.6.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.6.0) |
+  [6.7.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.7.0) |
+  [6.8.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.8.0) |
+  [6.8.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.8.1) |
+  [6.9.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.9.0) |
+  [6.10.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.10.0) |
+  [6.10.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.10.1) |
+  [6.11.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.11.0)
 
 ## [4.1.0] - 2024-12-08
 

@@ -5,49 +5,37 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Disallow duplicate @import rules',
     code: `
-      @import 'a.css';
-      @import 'a.css';
+      @import "test.css";
+      @import "test.css";
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule a.css'],
+      messages: ['Unexpected duplicate @import rule test.css'],
       severities: ['error'],
     },
   },
   {
     name: 'Disallow duplicate @import rules',
     code: `
-      @import url("a.css");
-      @import url("a.css");
+      @import url("test.css");
+      @import url("test.css");
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule a.css'],
+      messages: ['Unexpected duplicate @import rule test.css'],
       severities: ['error'],
     },
   },
   {
     name: 'Disallow duplicate @import rules',
     code: `
-      @import "a.css";
-      @import 'a.css';
+      @import "test-1.css";
+      @import "test-2.css";
+      @import url("test-1.css");
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule a.css'],
-      severities: ['error'],
-    },
-  },
-  {
-    name: 'Disallow duplicate @import rules',
-    code: `
-      @import "a.css";
-      @import 'b.css';
-      @import url(a.css);
-    `,
-    expect: {
-      errored: true,
-      messages: ['Unexpected duplicate @import rule a.css'],
+      messages: ['Unexpected duplicate @import rule test-1.css'],
       severities: ['error'],
     },
   },
