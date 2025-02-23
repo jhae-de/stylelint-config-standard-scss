@@ -4,8 +4,8 @@ export
 PROJECT_NAME ?= JHAE Standard SCSS Stylelint config
 COMPOSE_PROJECT_NAME ?= $(shell echo $(PROJECT_NAME) | sed 's/\(.*\)/\L\1/;s/[^[:alnum:]_-]/-/g')
 
-.DEFAULT_GOAL = help
-TARGET_DESCRIPTION_INDENTATION = 15
+.DEFAULT_GOAL := help
+TARGET_DESCRIPTION_INDENTATION := 15
 
 .PHONY: help
 help: ## Display this help
