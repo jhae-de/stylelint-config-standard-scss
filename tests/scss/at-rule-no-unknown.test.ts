@@ -15,20 +15,21 @@ new ConfigVerifier('index.yaml').verify(
     name: 'Allow Tailwind CSS at-rules',
     code: `
       @config "./tailwind.config.ts";
-      
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
-      
-      @layer base {
-        test {
-          @apply bg-white text-black;
-        }
-      }
-      
+      @plugin "@tailwindcss/typography";
+      @reference "tailwindcss";
       @responsive {}
       @screen sm {}
+      @source "./node_modules/@company/lib";
+      @tailwind base;
+      @theme {}
+      @utility util {}
+      @variant dark {}
+      @custom-variant pointer-coarse (@media (pointer: coarse));
       @variants hover {}
+      
+      test {
+        @apply bg-white text-black;
+      }
     `,
   },
 );

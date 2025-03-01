@@ -30,13 +30,19 @@ rules:
   scss/at-rule-no-unknown:
     - true
     - ignoreAtRules:
-        - apply
-        - config
-        - layer
-        - responsive
-        - screen
-        - tailwind
-        - variants
+        - apply # Tailwind CSS v0
+        - config # Tailwind CSS v3
+        - custom-variant # Tailwind CSS v4
+        - plugin # Tailwind CSS v4
+        - reference # Tailwind CSS v4
+        - responsive # Tailwind CSS v0
+        - screen # Tailwind CSS v0
+        - source # Tailwind CSS v4
+        - tailwind # Tailwind CSS v0
+        - theme # Tailwind CSS v4
+        - utility # Tailwind CSS v4
+        - variant # Tailwind CSS v4
+        - variants # Tailwind CSS v0
   scss/dollar-variable-pattern:
     - ^(-?[a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected variable name to be kebab-case (scss/dollar-variable-pattern)

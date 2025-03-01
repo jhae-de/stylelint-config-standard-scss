@@ -5,14 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [4.2.0] - 2025-03-02
 
 ### Changed
 
-- Bumped `stylelint` from `16.11.0` to `16.13.0`  
+- `scss/at-rule-no-unknown` rule
+
+  Added Tailwind CSS at-rules to ignored at-rules
+
+  - `@theme`
+  - `@source`
+  - `@utility`
+  - `@variant`
+  - `@custom-variant`
+  - `@reference`
+  - `@plugin`
+
+  Removed `@layer` from ignored at-rules, as it is ignored by default.
+
+- Bumped `stylelint` from `16.11.0` to `16.15.0`  
   Release notes:
   [16.12.0](https://github.com/stylelint/stylelint/releases/tag/16.12.0) |
-  [16.13.0](https://github.com/stylelint/stylelint/releases/tag/16.13.0)
+  [16.13.0](https://github.com/stylelint/stylelint/releases/tag/16.13.0) |
+  [16.13.1](https://github.com/stylelint/stylelint/releases/tag/16.13.1) |
+  [16.13.2](https://github.com/stylelint/stylelint/releases/tag/16.13.2) |
+  [16.14.0](https://github.com/stylelint/stylelint/releases/tag/16.14.0) |
+  [16.14.1](https://github.com/stylelint/stylelint/releases/tag/16.14.1) |
+  [16.15.0](https://github.com/stylelint/stylelint/releases/tag/16.15.0)
 - Bumped `stylelint-scss` from `6.4.0` to `6.11.0`  
   Release notes:
   [6.4.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.4.1) |
@@ -233,7 +252,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.1.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.2.0...main
+[4.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.2.0
 [4.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.1.0
 [4.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.0.0
 [3.2.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v3.2.1
