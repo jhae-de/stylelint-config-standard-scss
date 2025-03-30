@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for variable names',
     code: `
-      $FOO-bar: 1;
-      $foo-BAR: 2;
+      $Foo-bar: 1;
+      $foo-Bar: 2;
       $FOO-BAR: 3;
-      $FOO_bar: 4;
-      $foo_BAR: 5;
+      $Foo_bar: 4;
+      $foo_Bar: 5;
       $FOO_BAR: 6;
       $foo_bar: 7;
       $Foobar: 8;

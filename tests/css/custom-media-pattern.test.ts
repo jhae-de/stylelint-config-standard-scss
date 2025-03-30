@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for custom media query names',
     code: `
-      @custom-media --FOO-bar (min-width: 10rem);
-      @custom-media --foo-BAR (min-width: 20rem);
+      @custom-media --Foo-bar (min-width: 10rem);
+      @custom-media --foo-Bar (min-width: 20rem);
       @custom-media --FOO-BAR (min-width: 30rem);
-      @custom-media --FOO_bar (min-width: 40rem);
-      @custom-media --foo_BAR (min-width: 50rem);
+      @custom-media --Foo_bar (min-width: 40rem);
+      @custom-media --foo_Bar (min-width: 50rem);
       @custom-media --FOO_BAR (min-width: 60rem);
       @custom-media --foo_bar (min-width: 70rem);
       @custom-media --Foobar (min-width: 80rem);

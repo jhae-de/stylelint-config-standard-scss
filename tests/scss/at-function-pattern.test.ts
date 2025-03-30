@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for function names',
     code: `
-      @function FOO-bar ();
-      @function foo-BAR ();
+      @function Foo-bar ();
+      @function foo-Bar ();
       @function FOO-BAR ();
-      @function FOO_bar ();
-      @function foo_BAR ();
+      @function Foo_bar ();
+      @function foo_Bar ();
       @function FOO_BAR ();
       @function foo_bar ();
       @function Foobar ();

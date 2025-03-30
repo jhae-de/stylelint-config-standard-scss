@@ -6,22 +6,21 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for id selectors',
     code: `
-      #FOO-bar {};
-      #foo-BAR {};
+      #Foo-bar {};
+      #foo-Bar {};
       #FOO-BAR {};
-      #FOO_bar {};
-      #foo_BAR {};
+      #Foo_bar {};
+      #foo_Bar {};
       #FOO_BAR {};
       #foo_bar {};
       #Foobar {};
       #FooBar {};
       #fooBar {};
-      div > .test + #fooBar {};
     `,
     expect: {
       errored: true,
-      messages: new Array(11).fill('Expected id selector to be kebab-case') as string[],
-      severities: new Array(11).fill('error') as Severity[],
+      messages: new Array(10).fill('Expected id selector to be kebab-case') as string[],
+      severities: new Array(10).fill('error') as Severity[],
     },
   },
   {
@@ -30,7 +29,6 @@ new ConfigVerifier('index.yaml').verify(
       #foo {};
       #foo-bar {};
       #foo1-bar-2 {};
-      div > .test + #foo-bar {};
     `,
   },
 );

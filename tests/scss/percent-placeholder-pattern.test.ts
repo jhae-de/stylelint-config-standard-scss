@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for placeholder names',
     code: `
-      %FOO-bar {};
-      %foo-BAR {};
+      %Foo-bar {};
+      %foo-Bar {};
       %FOO-BAR {};
-      %FOO_bar {};
-      %foo_BAR {};
+      %Foo_bar {};
+      %foo_Bar {};
       %FOO_BAR {};
       %foo_bar {};
       %Foobar {};

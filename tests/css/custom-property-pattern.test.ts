@@ -7,11 +7,11 @@ new ConfigVerifier('index.yaml').verify(
     name: 'Require kebab-case for custom property names',
     code: `
       :root {
-        --FOO-bar: 10rem;
-        --foo-BAR: 20rem;
+        --Foo-bar: 10rem;
+        --foo-Bar: 20rem;
         --FOO-BAR: 30rem;
-        --FOO_bar: 40rem;
-        --foo_BAR: 50rem;
+        --Foo_bar: 40rem;
+        --foo_Bar: 50rem;
         --FOO_BAR: 60rem;
         --foo_bar: 70rem;
         --Foobar: 80rem;

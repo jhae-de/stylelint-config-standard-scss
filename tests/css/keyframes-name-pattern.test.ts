@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for keyframe names',
     code: `
-      @keyframes FOO-bar {};
-      @keyframes foo-BAR {};
+      @keyframes Foo-bar {};
+      @keyframes foo-Bar {};
       @keyframes FOO-BAR {};
-      @keyframes FOO_bar {};
-      @keyframes foo_BAR {};
+      @keyframes Foo_bar {};
+      @keyframes foo_Bar {};
       @keyframes FOO_BAR {};
       @keyframes foo_bar {};
       @keyframes Foobar {};
