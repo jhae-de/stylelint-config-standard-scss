@@ -6,11 +6,11 @@ new ConfigVerifier('index.yaml').verify(
   {
     name: 'Require kebab-case for mixin names',
     code: `
-      @mixin FOO-bar ();
-      @mixin foo-BAR ();
+      @mixin Foo-bar ();
+      @mixin foo-Bar ();
       @mixin FOO-BAR ();
-      @mixin FOO_bar ();
-      @mixin foo_BAR ();
+      @mixin Foo_bar ();
+      @mixin foo_Bar ();
       @mixin FOO_BAR ();
       @mixin foo_bar ();
       @mixin Foobar ();

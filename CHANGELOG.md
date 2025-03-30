@@ -5,24 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] - 2025-03-30
+
+### Added
+
+- `layer-name-pattern` rule
+
+### Changed
+
+- Bumped `stylelint` from `16.15.0` to `16.17.0`  
+  Release notes:
+  [16.16.0](https://github.com/stylelint/stylelint/releases/tag/16.16.0) |
+  [16.17.0](https://github.com/stylelint/stylelint/releases/tag/16.17.0)
+
 ## [4.2.0] - 2025-03-02
 
 ### Changed
 
 - `scss/at-rule-no-unknown` rule
-
-  Added Tailwind CSS at-rules to ignored at-rules
-
-  - `@theme`
-  - `@source`
-  - `@utility`
-  - `@variant`
-  - `@custom-variant`
-  - `@reference`
-  - `@plugin`
-
-  Removed `@layer` from ignored at-rules, as it is ignored by default.
-
+  - Added the Tailwind CSS v4 directives to the ignored at-rules:
+    - `@theme`
+    - `@source`
+    - `@utility`
+    - `@variant`
+    - `@custom-variant`
+    - `@reference`
+    - `@plugin`
+  - Removed `@layer` from the ignored at-rules, as it is ignored by default.
 - Bumped `stylelint` from `16.11.0` to `16.15.0`  
   Release notes:
   [16.12.0](https://github.com/stylelint/stylelint/releases/tag/16.12.0) |
@@ -51,7 +60,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - `scss/at-rule-no-unknown` rule  
-  Added Tailwind CSS at-rules to ignored at-rules
+  Added Tailwind CSS directives to the ignored at-rules:
   - `@apply`
   - `@config`
   - `@layer`
@@ -98,7 +107,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - `scss/at-rule-no-unknown` rule  
-  Added `@tailwind` to ignored at-rules
+  Added `@tailwind` to the ignored at-rules.
 - Bumped `stylelint-scss` from `6.5.0` to `6.7.0`  
   Release notes:
   [6.5.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.5.1) |
@@ -252,7 +261,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v4.2.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v5.0.0...main
+[5.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v5.0.0
 [4.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.2.0
 [4.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.1.0
 [4.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.0.0
