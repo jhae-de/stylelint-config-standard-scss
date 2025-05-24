@@ -2,6 +2,13 @@ extends:
   - stylelint-config-standard-scss
 
 rules:
+  at-rule-no-deprecated:
+    - true
+    - ignoreAtRules:
+        - apply # Tailwind CSS v0
+  container-name-pattern:
+    - ^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$
+    - message: Expected container name to be kebab-case (container-name-pattern)
   custom-media-pattern:
     - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected custom media query name to be kebab-case (custom-media-pattern)
