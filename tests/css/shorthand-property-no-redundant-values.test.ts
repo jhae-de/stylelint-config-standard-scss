@@ -40,6 +40,15 @@ new ConfigVerifier('index.yaml').verify(
   },
   {
     name: 'Disallow redundant values within shorthand properties',
+    code: 'test { border-radius: 1px 2px 3px 2px; }',
+    expect: {
+      errored: true,
+      messages: ['Expected "1px 2px 3px 2px" to be "1px 2px 3px"'],
+      severities: ['error'],
+    },
+  },
+  {
+    name: 'Disallow redundant values within shorthand properties',
     code: 'test { -webkit-border-radius: 1px 1px 1px 1px; }',
     expect: {
       errored: true,
