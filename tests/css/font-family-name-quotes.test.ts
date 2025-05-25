@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify(
   'font-family-name-quotes',
@@ -17,7 +18,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Expected quotes around "MyFontVersion6"', 'Expected quotes around "sake_case_font"'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {

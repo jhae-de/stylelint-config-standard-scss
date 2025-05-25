@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('lightness-notation', {
   name: 'Require percentage notation for lightness',
@@ -9,6 +10,6 @@ new ConfigVerifier('index.yaml').verify('lightness-notation', {
   expect: {
     errored: true,
     messages: ['Expected "0.5" to be "0.5%"', 'Expected "50" to be "50%"'],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

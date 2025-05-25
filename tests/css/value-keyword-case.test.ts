@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('value-keyword-case', {
   name: 'Allow only lowercase keyword values',
@@ -16,6 +17,6 @@ new ConfigVerifier('index.yaml').verify('value-keyword-case', {
       'Expected "BLOCK" to be "block"',
       'Expected "-WEBKIT-TRANSFORM" to be "-webkit-transform"',
     ],
-    severities: ['error', 'error', 'error', 'error'],
+    severities: new Array(4).fill('error') as Severity[],
   },
 });

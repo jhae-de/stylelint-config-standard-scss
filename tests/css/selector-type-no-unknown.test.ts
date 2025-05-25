@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify(
   'selector-type-no-unknown',
@@ -11,7 +12,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Unexpected unknown type selector "unknown"', 'Unexpected unknown type selector "tag"'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {

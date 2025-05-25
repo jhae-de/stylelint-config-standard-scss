@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('selector-pseudo-class-no-unknown', {
   name: 'Disallow unknown pseudo-class selectors',
@@ -14,6 +15,6 @@ new ConfigVerifier('index.yaml').verify('selector-pseudo-class-no-unknown', {
       'Unexpected unknown pseudo-class selector ":UNKNOWN"',
       'Unexpected unknown pseudo-class selector ":hoverr"',
     ],
-    severities: ['error', 'error', 'error'],
+    severities: new Array(3).fill('error') as Severity[],
   },
 });

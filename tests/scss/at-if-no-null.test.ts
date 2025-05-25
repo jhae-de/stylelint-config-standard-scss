@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('scss/at-if-no-null', {
   name: 'Disallow check for equality to null',
@@ -14,6 +15,6 @@ new ConfigVerifier('index.yaml').verify('scss/at-if-no-null', {
       'Expected @if not statement rather than @if statement == null',
       'Expected @if statement rather than @if statement != null',
     ],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

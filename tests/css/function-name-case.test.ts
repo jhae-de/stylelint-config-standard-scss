@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify(
   'function-name-case',
@@ -18,7 +19,7 @@ new ConfigVerifier('index.yaml').verify(
         'Expected "CALC" to be "calc"',
         'Expected "-WEBKIT-RADIAL-GRADIENT" to be "-webkit-radial-gradient"',
       ],
-      severities: ['error', 'error', 'error', 'error'],
+      severities: new Array(4).fill('error') as Severity[],
     },
   },
   {
