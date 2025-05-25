@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('property-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for properties',
@@ -14,6 +15,6 @@ new ConfigVerifier('index.yaml').verify('property-no-vendor-prefix', {
       'Unexpected vendor-prefixed property "-webkit-transform"',
       'Unexpected vendor-prefixed property "-moz-columns"',
     ],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

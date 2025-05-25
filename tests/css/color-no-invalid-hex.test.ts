@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('color-no-invalid-hex', {
   name: 'Disallow invalid hex colors',
@@ -14,6 +15,6 @@ new ConfigVerifier('index.yaml').verify('color-no-invalid-hex', {
       'Unexpected invalid hex color "#fff1az"',
       'Unexpected invalid hex color "#12345aa"',
     ],
-    severities: ['error', 'error', 'error'],
+    severities: new Array(3).fill('error') as Severity[],
   },
 });

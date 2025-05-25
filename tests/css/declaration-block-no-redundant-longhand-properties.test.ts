@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('declaration-block-no-redundant-longhand-properties', {
   name: 'Disallow redundant longhand properties within declaration-block',
@@ -18,6 +19,6 @@ new ConfigVerifier('index.yaml').verify('declaration-block-no-redundant-longhand
   expect: {
     errored: true,
     messages: ['Expected shorthand property "margin"', 'Expected shorthand property "-webkit-transition"'],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

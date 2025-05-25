@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify(
   'scss/operator-no-unspaced',
@@ -8,7 +9,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Expected single space before "+"', 'Expected single space after "+"'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {
@@ -26,7 +27,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Expected single space before "-"', 'Expected single space after "-"'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {
@@ -44,7 +45,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Expected single space before "=="', 'Expected single space after "=="'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {

@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify(
   'comment-whitespace-inside',
@@ -8,7 +9,7 @@ new ConfigVerifier('index.yaml').verify(
     expect: {
       errored: true,
       messages: ['Expected whitespace after "/*"', 'Expected whitespace before "*/"'],
-      severities: ['error', 'error'],
+      severities: new Array(2).fill('error') as Severity[],
     },
   },
   {

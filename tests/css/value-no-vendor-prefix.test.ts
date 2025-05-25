@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('value-no-vendor-prefix', {
   name: 'Disallow vendor prefixes for values',
@@ -12,6 +13,6 @@ new ConfigVerifier('index.yaml').verify('value-no-vendor-prefix', {
       'Unexpected vendor-prefixed value "-webkit-flex"',
       'Unexpected vendor-prefixed value "-webkit-linear-gradient"',
     ],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });

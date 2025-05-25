@@ -1,4 +1,5 @@
 import { ConfigVerifier } from '@jhae/stylelint-config-verifier';
+import type { Severity } from 'stylelint';
 
 new ConfigVerifier('index.yaml').verify('hue-degree-notation', {
   name: 'Require angle notation for degree hues',
@@ -11,6 +12,6 @@ new ConfigVerifier('index.yaml').verify('hue-degree-notation', {
   expect: {
     errored: true,
     messages: ['Expected "180" to be "180deg"', 'Expected "10" to be "10deg"'],
-    severities: ['error', 'error'],
+    severities: new Array(2).fill('error') as Severity[],
   },
 });
