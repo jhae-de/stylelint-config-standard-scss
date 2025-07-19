@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "a" to come before selector "b a"'],
+      messages: ['Expected selector "a" to come before selector "b a", at line 2'],
       severities: ['error'],
     },
   },
@@ -22,7 +22,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "a" to come before selector "a + a"'],
+      messages: ['Expected selector "a" to come before selector "a + a", at line 2'],
       severities: ['error'],
     },
   },
@@ -34,7 +34,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "a[foo]" to come before selector "b > a[foo]"'],
+      messages: ['Expected selector "a[foo]" to come before selector "b > a[foo]", at line 2'],
       severities: ['error'],
     },
   },
@@ -48,7 +48,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "b" to come before selector "a > b"'],
+      messages: ['Expected selector "b" to come before selector "a > b", at line 3'],
       severities: ['error'],
     },
   },
@@ -62,7 +62,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "a" to come before selector "#c a"'],
+      messages: ['Expected selector "a" to come before selector "#c a", at line 3'],
       severities: ['error'],
     },
   },
@@ -77,7 +77,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected selector "a" to come before selector "b a"'],
+      messages: ['Expected selector "a" to come before selector "b a", at line 2'],
       severities: ['error'],
     },
   },
