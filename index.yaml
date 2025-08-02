@@ -2,6 +2,15 @@ extends:
   - stylelint-config-standard-scss
 
 rules:
+  at-rule-empty-line-before:
+    - always
+    - except:
+        - blockless-after-same-name-blockless
+        - first-nested
+      ignore:
+        - after-comment
+      ignoreAtRules:
+        - else
   at-rule-no-deprecated:
     - true
     - ignoreAtRules:

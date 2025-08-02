@@ -24,10 +24,11 @@ new ConfigVerifier('index.yaml').verify(
     },
   },
   {
-    name: 'Require an empty line before at-rules except blockless after blockless',
+    name: 'Require an empty line before at-rules except blockless after blockless with same name',
     code: `
       @use "a.scss";
       @use "b.scss";
+      
       @forward "c.scss";
       
       @media {}
