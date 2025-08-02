@@ -28,22 +28,22 @@
     "test:watch": "npm run-script test -- --watchAll"
   },
   "dependencies": {
-    "stylelint": "^16.22",
-    "stylelint-config-standard-scss": "^15.0",
+    "stylelint": "^16.23",
+    "stylelint-config-standard-scss": "^16.0",
     "stylelint-scss": "^6.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.0",
     "@jhae/stylelint-config-verifier": "^1.0",
-    "@types/jest": "^29.0",
+    "@types/jest": "^30.0",
     "eslint": "^9.0",
     "eslint-config-prettier": "^10.0",
     "eslint-plugin-prettier": "^5.1",
-    "jest": "^29.0",
+    "jest": "^30.0",
     "prettier": "^3.0",
     "ts-jest": "^29.2",
     "typescript": "^5.0",
-    "typescript-eslint": "^8.0"
+    "typescript-eslint": "^8.42"
   },
   "keywords": [
     "config",
