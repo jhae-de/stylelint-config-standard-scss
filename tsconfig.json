@@ -6,6 +6,5 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext"
-  },
-  "include": ["./tests"]
+  }
 }

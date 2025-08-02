@@ -5,12 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [7.0.0] - 2025-09-20
 
 ### Changed
 
 - `at-rule-empty-line-before` rule  
   Changed the `blockless-after-blockless` option to `blockless-after-same-name-blockless`.
+- Bumped `stylelint` from `16.18.0` to `16.23.0`  
+  Release notes:
+  [16.19.0](https://github.com/stylelint/stylelint/releases/tag/16.19.0) |
+  [16.19.1](https://github.com/stylelint/stylelint/releases/tag/16.19.1) |
+  [16.20.0](https://github.com/stylelint/stylelint/releases/tag/16.20.0) |
+  [16.21.0](https://github.com/stylelint/stylelint/releases/tag/16.21.0) |
+  [16.21.1](https://github.com/stylelint/stylelint/releases/tag/16.21.1) |
+  [16.22.0](https://github.com/stylelint/stylelint/releases/tag/16.22.0) |
+  [16.23.0](https://github.com/stylelint/stylelint/releases/tag/16.23.0)
+- Bumped `stylelint-config-standard-scss` from `15.0.0` to `16.0.0`  
+  Release notes:
+  [15.0.1](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v15.0.1) |
+  [16.0.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v16.0.0)
 
 ### Removed
 
@@ -288,7 +301,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v6.0.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v7.0.0...main
+[7.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.0
 [6.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v6.0.0
 [5.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v5.0.0
 [4.2.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v4.2.0
