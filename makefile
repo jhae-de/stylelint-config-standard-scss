@@ -28,6 +28,10 @@ help: ## Display this help
 app-bash: start ## Access the app container
 	@docker compose exec app bash
 
+.PHONY: app-fix
+app-fix: start ## Automatically fix, where possible, problems in the source code
+	@docker compose exec app bash -c 'npm run-script fix'
+
 .PHONY: app-install
 app-install: docker-pull start ## Install the dependencies
 	@docker compose exec app bash -c 'npm install'

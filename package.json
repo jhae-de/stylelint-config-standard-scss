@@ -15,9 +15,12 @@
   "type": "module",
   "main": "index.yaml",
   "scripts": {
+    "fix": "npm run-script fix:prettier && npm run-script fix:eslint",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write .",
     "lint": "npm run-script lint:prettier && npm run-script lint:eslint",
-    "lint:prettier": "prettier . --check",
     "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
     "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
     "test:watch": "npm run-script test -- --watchAll"
   },
