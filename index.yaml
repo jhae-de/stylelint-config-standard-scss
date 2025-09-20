@@ -11,10 +11,6 @@ rules:
         - after-comment
       ignoreAtRules:
         - else
-  at-rule-no-deprecated:
-    - true
-    - ignoreAtRules:
-        - apply # Tailwind CSS v0
   container-name-pattern:
     - ^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$
     - message: Expected container name to be kebab-case (container-name-pattern)
