@@ -12,6 +12,11 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `at-rule-empty-line-before` rule  
   Changed the `blockless-after-blockless` option to `blockless-after-same-name-blockless`.
 
+### Removed
+
+- `at-rule-no-deprecated` rule  
+  The rule existed only to add `@apply` to the exceptions. However, this is not a deprecated at-rule.
+
 ## [6.0.0] - 2025-05-25
 
 ### Added
