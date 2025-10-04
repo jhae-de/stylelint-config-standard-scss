@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.0] - 2025-10-04
+
+### Changed
+
+- Bumped `stylelint` from `16.24.0` to `16.25.0`  
+  Release notes: [16.25.0](https://github.com/stylelint/stylelint/releases/tag/16.25.0)
+
+### Removed
+
+The following rules previously existed only to append the missing rule name to error messages. This issue was fixed in
+Stylelint `16.25.0`, so the rules can now be removed.
+
+- `container-name-pattern` rule
+- `custom-media-pattern` rule
+- `custom-property-pattern` rule
+- `keyframes-name-pattern` rule
+- `selector-class-pattern` rule
+- `selector-id-pattern` rule
+
+The `layer-name-pattern` rule will remain for now, as it fixes a bug in the `stylelint-config-standard` configuration
+(see [#372](https://github.com/stylelint/stylelint-config-standard/issues/372)). It will also be removed in a future
+release once this issue is resolved.
+
+The `*-pattern` rules in the `scss` namespace will also remain for now to ensure consistency in error messages.
+
 ## [7.0.1] - 2025-09-20
 
 ### Changed
@@ -310,7 +335,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v7.0.1...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v7.1.0...main
+[7.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.1.0
 [7.0.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.1
 [7.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.0
 [6.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v6.0.0

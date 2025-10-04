@@ -11,27 +11,9 @@ rules:
         - after-comment
       ignoreAtRules:
         - else
-  container-name-pattern:
-    - ^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected container name to be kebab-case (container-name-pattern)
-  custom-media-pattern:
-    - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected custom media query name to be kebab-case (custom-media-pattern)
-  custom-property-pattern:
-    - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected custom property name to be kebab-case (custom-property-pattern)
-  keyframes-name-pattern:
-    - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected keyframe name to be kebab-case (keyframes-name-pattern)
   layer-name-pattern:
     - ^([a-z][a-z0-9]*)([.-][a-z0-9]+)*$
     - message: Expected layer name to be kebab-case (layer-name-pattern)
-  selector-class-pattern:
-    - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected class selector to be kebab-case (selector-class-pattern)
-  selector-id-pattern:
-    - ^([a-z][a-z0-9]*)(-[a-z0-9]+)*$
-    - message: Expected id selector to be kebab-case (selector-id-pattern)
 
   # SCSS
   scss/at-function-pattern:
