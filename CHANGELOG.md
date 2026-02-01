@@ -42,6 +42,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   - `scss/at-mixin-pattern` rule
   - `scss/dollar-variable-pattern` rule
   - `scss/percent-placeholder-pattern` rule
+- Support for Node.js less than 20
 
 ## [7.1.0] - 2025-10-04
 
