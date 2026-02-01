@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.0.0] - 2026-02-01
+
+### Added
+
+- `scss/selector-class-pattern` rule
+
+### Changed
+
+- Bumped `stylelint` from `16.25.0` to `17.0`  
+  Release notes:
+  [16.26.0](https://github.com/stylelint/stylelint/releases/tag/16.26.0) |
+  [16.26.1](https://github.com/stylelint/stylelint/releases/tag/16.26.1) |
+  [17.0.0](https://github.com/stylelint/stylelint/releases/tag/17.0.0)
+- Bumped `stylelint-scss` from `6.11.0` to `7.0.0`  
+  Release notes:
+  [6.11.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.11.1) |
+  [6.12.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.12.0) |
+  [6.12.1](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.12.1) |
+  [6.13.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.13.0) |
+  [6.14.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v6.14.0) |
+  [7.0.0](https://github.com/stylelint-scss/stylelint-scss/releases/tag/v7.0.0)
+- Bumped `stylelint-config-standard-scss` from `16.0.0` to `17.0.0`  
+  Release notes: [17.0.0](https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/tag/v17.0.0)
+
+### Removed
+
+- `layer-name-pattern` rule  
+  The rule existed only to fix a bug in the `stylelint-config-standard` configuration
+  (see [#372](https://github.com/stylelint/stylelint-config-standard/issues/372)). This issue was fixed in version
+  `39.0.1`, so the rule can now be removed.
+- The following rules previously existed only to keep the error messages consistent with the `*-pattern` error messages
+  in the `stylelint-config-standard-scss` configuration. This issue was fixed in version `17.0.0`, so the rules can now
+  be removed.
+  - `scss/at-function-pattern` rule
+  - `scss/at-mixin-pattern` rule
+  - `scss/dollar-variable-pattern` rule
+  - `scss/percent-placeholder-pattern` rule
+
 ## [7.1.0] - 2025-10-04
 
 ### Changed
@@ -335,7 +373,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v7.1.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v8.0.0...main
+[8.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v8.0.0
 [7.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.1.0
 [7.0.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.1
 [7.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.0
