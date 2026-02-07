@@ -22,3 +22,6 @@ jobs:
     with:
       node-version: 24
       test-script: 'test'
+
+permissions:
+  contents: read
