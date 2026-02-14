@@ -21,7 +21,7 @@ jobs:
     uses: jhae-de/jhae-de/.github/workflows/node-project-test.yaml@main
     with:
       node-version: 24
-      test-script: 'test'
+      test-script: test
 
 permissions:
   contents: read
