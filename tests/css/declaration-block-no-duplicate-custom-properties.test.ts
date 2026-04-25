@@ -12,7 +12,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate "--custom-property"'],
+      messages: ['Duplicate custom property "--custom-property"'],
       severities: ['error'],
     },
   },
@@ -27,7 +27,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate "--custom-property"'],
+      messages: ['Duplicate custom property "--custom-property"'],
       severities: ['error'],
     },
   },

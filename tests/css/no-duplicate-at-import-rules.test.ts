@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule test.css'],
+      messages: ['Duplicate @import rule test.css'],
       severities: ['error'],
     },
   },
@@ -22,7 +22,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule test.css'],
+      messages: ['Duplicate @import rule test.css'],
       severities: ['error'],
     },
   },
@@ -35,7 +35,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate @import rule test-1.css'],
+      messages: ['Duplicate @import rule test-1.css'],
       severities: ['error'],
     },
   },

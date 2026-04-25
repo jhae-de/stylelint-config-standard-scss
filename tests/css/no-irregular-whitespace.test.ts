@@ -5,7 +5,7 @@ new ConfigVerifier('index.yaml').verify('no-irregular-whitespace', {
   code: '.firstClass .secondClass {}',
   expect: {
     errored: true,
-    messages: ['Unexpected irregular whitespace'],
+    messages: ['Irregular whitespace'],
     severities: ['error'],
   },
 });

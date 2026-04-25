@@ -15,11 +15,7 @@ new ConfigVerifier('index.yaml').verify('at-rule-no-deprecated', {
   `,
   expect: {
     errored: true,
-    messages: [
-      'Unexpected deprecated at-rule "@nest"',
-      'Unexpected deprecated at-rule "@document"',
-      'Unexpected deprecated at-rule "@viewport"',
-    ],
+    messages: ['Deprecated at-rule "@nest"', 'Deprecated at-rule "@document"', 'Deprecated at-rule "@viewport"'],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

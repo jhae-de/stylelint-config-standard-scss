@@ -11,7 +11,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: new Array(2).fill('Unexpected unit') as string[],
+      messages: new Array(2).fill('Disallowed unit') as string[],
       severities: new Array(2).fill('error') as Severity[],
     },
   },

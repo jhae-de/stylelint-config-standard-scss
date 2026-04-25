@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify('function-linear-gradient-no-nonstandard
   `,
   expect: {
     errored: true,
-    messages: new Array(3).fill('Unexpected nonstandard direction') as string[],
+    messages: new Array(3).fill('Nonstandard direction') as string[],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

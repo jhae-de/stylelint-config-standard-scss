@@ -5,7 +5,7 @@ new ConfigVerifier('index.yaml').verify('media-type-no-deprecated', {
   code: '@media projection {}',
   expect: {
     errored: true,
-    messages: ['Unexpected deprecated media type "projection"'],
+    messages: ['Deprecated media type "projection"'],
     severities: ['error'],
   },
 });

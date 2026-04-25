@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected invalid position @import rule'],
+      messages: ['Invalid position for @import rule'],
       severities: ['error'],
     },
   },
@@ -22,7 +22,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected invalid position @import rule'],
+      messages: ['Invalid position for @import rule'],
       severities: ['error'],
     },
   },

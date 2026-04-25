@@ -11,10 +11,7 @@ new ConfigVerifier('index.yaml').verify('property-no-vendor-prefix', {
   `,
   expect: {
     errored: true,
-    messages: [
-      'Unexpected vendor-prefixed property "-webkit-transform"',
-      'Unexpected vendor-prefixed property "-moz-columns"',
-    ],
+    messages: ['Vendor-prefixed property "-webkit-transform"', 'Vendor-prefixed property "-moz-columns"'],
     severities: new Array(2).fill('error') as Severity[],
   },
 });

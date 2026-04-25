@@ -12,7 +12,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected duplicate "font-size"'],
+      messages: ['Duplicate property "font-size"'],
       severities: ['error'],
     },
   },

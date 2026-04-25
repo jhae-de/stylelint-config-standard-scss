@@ -16,7 +16,7 @@ new ConfigVerifier('index.yaml').verify('block-no-redundant-nested-style-rules',
   `,
   expect: {
     errored: true,
-    messages: new Array(2).fill('Unexpected redundant nested style rule') as string[],
+    messages: new Array(2).fill('Redundant nested style rule') as string[],
     severities: new Array(2).fill('error') as Severity[],
   },
 });

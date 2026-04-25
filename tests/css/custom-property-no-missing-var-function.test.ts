@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected missing var function for "--foo"'],
+      messages: ['Missing var function for "--foo"'],
       severities: ['error'],
     },
   },
@@ -22,7 +22,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected missing var function for "--foo"'],
+      messages: ['Missing var function for "--foo"'],
       severities: ['error'],
     },
   },

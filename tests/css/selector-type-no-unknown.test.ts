@@ -11,7 +11,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected unknown type selector "unknown"', 'Unexpected unknown type selector "tag"'],
+      messages: ['Unknown type selector "unknown"', 'Unknown type selector "tag"'],
       severities: new Array(2).fill('error') as Severity[],
     },
   },

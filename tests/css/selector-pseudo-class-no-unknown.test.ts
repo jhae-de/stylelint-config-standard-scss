@@ -11,9 +11,9 @@ new ConfigVerifier('index.yaml').verify('selector-pseudo-class-no-unknown', {
   expect: {
     errored: true,
     messages: [
-      'Unexpected unknown pseudo-class selector ":unknown"',
-      'Unexpected unknown pseudo-class selector ":UNKNOWN"',
-      'Unexpected unknown pseudo-class selector ":hoverr"',
+      'Unknown pseudo-class selector ":unknown"',
+      'Unknown pseudo-class selector ":UNKNOWN"',
+      'Unknown pseudo-class selector ":hoverr"',
     ],
     severities: new Array(3).fill('error') as Severity[],
   },

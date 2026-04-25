@@ -16,7 +16,7 @@ new ConfigVerifier('index.yaml').verify(
   `,
     expect: {
       errored: true,
-      messages: new Array(3).fill('Unexpected missing scoping root') as string[],
+      messages: new Array(3).fill('Missing scoping root') as string[],
       severities: new Array(3).fill('error') as Severity[],
     },
   },

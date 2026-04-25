@@ -14,7 +14,7 @@ new ConfigVerifier('index.yaml').verify('keyframe-declaration-no-important', {
     `,
   expect: {
     errored: true,
-    messages: ['Unexpected !important'],
+    messages: ['Disallowed !important'],
     severities: ['error'],
   },
 });

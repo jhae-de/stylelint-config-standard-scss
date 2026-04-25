@@ -7,7 +7,7 @@ new ConfigVerifier('index.yaml').verify(
     code: '',
     expect: {
       errored: true,
-      messages: ['Unexpected empty source'],
+      messages: ['Empty source'],
       severities: ['error'],
     },
   },
@@ -16,7 +16,7 @@ new ConfigVerifier('index.yaml').verify(
     code: '\t\t',
     expect: {
       errored: true,
-      messages: ['Unexpected empty source'],
+      messages: ['Empty source'],
       severities: ['error'],
     },
   },
@@ -25,7 +25,7 @@ new ConfigVerifier('index.yaml').verify(
     code: '\n',
     expect: {
       errored: true,
-      messages: ['Unexpected empty source'],
+      messages: ['Empty source'],
       severities: ['error'],
     },
   },
