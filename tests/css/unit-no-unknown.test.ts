@@ -7,7 +7,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'test { width: 10pixels; }',
     expect: {
       errored: true,
-      messages: ['Unexpected unknown unit "pixels"'],
+      messages: ['Unknown unit "pixels"'],
       severities: ['error'],
     },
   },
@@ -16,7 +16,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'test { width: calc(10px + 10pixels); }',
     expect: {
       errored: true,
-      messages: ['Unexpected unknown unit "pixels"'],
+      messages: ['Unknown unit "pixels"'],
       severities: ['error'],
     },
   },

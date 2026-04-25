@@ -13,7 +13,7 @@ new ConfigVerifier('index.yaml').verify('block-no-empty', {
   `,
   expect: {
     errored: true,
-    messages: new Array(3).fill('Unexpected empty block') as string[],
+    messages: new Array(3).fill('Empty block') as string[],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

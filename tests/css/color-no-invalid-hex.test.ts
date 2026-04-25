@@ -10,11 +10,7 @@ new ConfigVerifier('index.yaml').verify('color-no-invalid-hex', {
   `,
   expect: {
     errored: true,
-    messages: [
-      'Unexpected invalid hex color "#00"',
-      'Unexpected invalid hex color "#fff1az"',
-      'Unexpected invalid hex color "#12345aa"',
-    ],
+    messages: ['Invalid hex color "#00"', 'Invalid hex color "#fff1az"', 'Invalid hex color "#12345aa"'],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

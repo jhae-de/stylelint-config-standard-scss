@@ -13,7 +13,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected unknown property "colr"', 'Unexpected unknown property "my-property"'],
+      messages: ['Unknown property "colr"', 'Unknown property "my-property"'],
       severities: new Array(2).fill('error') as Severity[],
     },
   },

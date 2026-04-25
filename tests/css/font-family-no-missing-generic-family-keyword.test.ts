@@ -9,7 +9,7 @@ new ConfigVerifier('index.yaml').verify('font-family-no-missing-generic-family-k
   `,
   expect: {
     errored: true,
-    messages: new Array(2).fill('Unexpected missing generic font family') as string[],
+    messages: new Array(2).fill('Missing generic font family') as string[],
     severities: new Array(2).fill('error') as Severity[],
   },
 });

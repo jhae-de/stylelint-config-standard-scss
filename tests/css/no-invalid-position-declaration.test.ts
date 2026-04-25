@@ -13,7 +13,7 @@ new ConfigVerifier('index.yaml').verify('no-invalid-position-declaration', {
   `,
   expect: {
     errored: true,
-    messages: new Array(3).fill('Unexpected invalid position declaration') as string[],
+    messages: new Array(3).fill('Invalid position for declaration') as string[],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

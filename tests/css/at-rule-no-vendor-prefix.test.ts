@@ -5,7 +5,7 @@ new ConfigVerifier('index.yaml').verify('at-rule-no-vendor-prefix', {
   code: '@-webkit-keyframes {}',
   expect: {
     errored: true,
-    messages: ['Unexpected vendor-prefixed at-rule "@-webkit-keyframes"'],
+    messages: ['Vendor-prefixed at-rule "@-webkit-keyframes"'],
     severities: ['error'],
   },
 });

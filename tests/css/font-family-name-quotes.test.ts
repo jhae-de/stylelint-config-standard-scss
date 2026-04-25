@@ -26,7 +26,7 @@ new ConfigVerifier('index.yaml').verify(
     code: `test { font-family: 'Arial', sans-serif; }`,
     expect: {
       errored: true,
-      messages: ['Unexpected quotes around "Arial"'],
+      messages: ['Expected no quotes around "Arial"'],
       severities: ['error'],
     },
   },

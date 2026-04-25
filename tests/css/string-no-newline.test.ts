@@ -12,7 +12,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected newline in string'],
+      messages: ['Newline in string'],
       severities: ['error'],
     },
   },
@@ -24,7 +24,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected newline in string'],
+      messages: ['Newline in string'],
       severities: ['error'],
     },
   },
@@ -39,7 +39,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected newline in string'],
+      messages: ['Newline in string'],
       severities: ['error'],
     },
   },
@@ -51,7 +51,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected newline in string'],
+      messages: ['Newline in string'],
       severities: ['error'],
     },
   },
@@ -65,7 +65,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected newline in string'],
+      messages: ['Newline in string'],
       severities: ['error'],
     },
   },

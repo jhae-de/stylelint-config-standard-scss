@@ -7,7 +7,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'test { color: black; top: 10px; }',
     expect: {
       errored: true,
-      messages: ['Expected no more than 1 declaration'],
+      messages: ['Too many declarations, maximum 1'],
       severities: ['error'],
     },
   },
@@ -19,7 +19,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Expected no more than 1 declaration'],
+      messages: ['Too many declarations, maximum 1'],
       severities: ['error'],
     },
   },

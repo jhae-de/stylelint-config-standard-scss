@@ -10,7 +10,7 @@ new ConfigVerifier('index.yaml').verify('media-feature-name-no-unknown', {
   `,
   expect: {
     errored: true,
-    messages: new Array(3).fill('Unexpected unknown media feature name "unknown"') as string[],
+    messages: new Array(3).fill('Unknown media feature name "unknown"') as string[],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

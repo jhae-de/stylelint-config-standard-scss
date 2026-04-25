@@ -9,7 +9,7 @@ new ConfigVerifier('index.yaml').verify('syntax-string-no-invalid', {
   `,
   expect: {
     errored: true,
-    messages: ['Unexpected invalid syntax string ""<bar>""'],
+    messages: ['Invalid syntax string "<bar>"'],
     severities: ['error'],
   },
 });

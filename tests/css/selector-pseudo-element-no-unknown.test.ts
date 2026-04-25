@@ -11,9 +11,9 @@ new ConfigVerifier('index.yaml').verify('selector-pseudo-element-no-unknown', {
   expect: {
     errored: true,
     messages: [
-      'Unexpected unknown pseudo-element selector "::pseudo"',
-      'Unexpected unknown pseudo-element selector "::PSEUDO"',
-      'Unexpected unknown pseudo-element selector "::element"',
+      'Unknown pseudo-element selector "::pseudo"',
+      'Unknown pseudo-element selector "::PSEUDO"',
+      'Unknown pseudo-element selector "::element"',
     ],
     severities: new Array(3).fill('error') as Severity[],
   },

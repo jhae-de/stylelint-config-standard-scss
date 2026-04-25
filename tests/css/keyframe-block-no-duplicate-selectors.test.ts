@@ -21,7 +21,11 @@ new ConfigVerifier('index.yaml').verify('keyframe-block-no-duplicate-selectors',
   `,
   expect: {
     errored: true,
-    messages: ['Unexpected duplicate "0%"', 'Unexpected duplicate "from"', 'Unexpected duplicate "FROM"'],
+    messages: [
+      'Duplicate keyframe selector "0%"',
+      'Duplicate keyframe selector "from"',
+      'Duplicate keyframe selector "FROM"',
+    ],
     severities: new Array(3).fill('error') as Severity[],
   },
 });

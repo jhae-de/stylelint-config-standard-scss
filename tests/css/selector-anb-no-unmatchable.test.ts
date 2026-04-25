@@ -7,7 +7,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'div:nth-child(0) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-child(0)"'],
+      messages: ['Unmatchable An+B selector ":nth-child(0)"'],
       severities: ['error'],
     },
   },
@@ -16,7 +16,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'div:nth-last-child(0n) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-last-child(0n)"'],
+      messages: ['Unmatchable An+B selector ":nth-last-child(0n)"'],
       severities: ['error'],
     },
   },
@@ -25,7 +25,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'div:nth-of-type(0n+0) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-of-type(0n+0)"'],
+      messages: ['Unmatchable An+B selector ":nth-of-type(0n+0)"'],
       severities: ['error'],
     },
   },
@@ -34,7 +34,7 @@ new ConfigVerifier('index.yaml').verify(
     code: 'div:nth-last-of-type(0 of a) {}',
     expect: {
       errored: true,
-      messages: ['Unexpected unmatchable An+B selector ":nth-last-of-type(0 of a)"'],
+      messages: ['Unmatchable An+B selector ":nth-last-of-type(0 of a)"'],
       severities: ['error'],
     },
   },

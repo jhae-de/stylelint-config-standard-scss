@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.0.0] - 2026-04-25
+
+### Added
+
+- `selector-no-deprecated` rule
+
+### Changed
+
+- Bumped `stylelint` from `17.0` to `17.8`  
+  Release notes:
+  [17.1.0](https://github.com/stylelint/stylelint/releases/tag/17.1.0) |
+  [17.1.1](https://github.com/stylelint/stylelint/releases/tag/17.1.1) |
+  [17.2.0](https://github.com/stylelint/stylelint/releases/tag/17.2.0) |
+  [17.3.0](https://github.com/stylelint/stylelint/releases/tag/17.3.0) |
+  [17.4.0](https://github.com/stylelint/stylelint/releases/tag/17.4.0) |
+  [17.5.0](https://github.com/stylelint/stylelint/releases/tag/17.5.0) |
+  [17.6.0](https://github.com/stylelint/stylelint/releases/tag/17.6.0) |
+  [17.7.0](https://github.com/stylelint/stylelint/releases/tag/17.7.0) |
+  [17.8.0](https://github.com/stylelint/stylelint/releases/tag/17.8.0)
+
 ## [8.0.0] - 2026-02-01
 
 ### Added
@@ -374,7 +394,8 @@ Initial release
 - `scss/function-unquote-no-unquoted-strings-inside` rule
 - `scss/no-global-function-names` rule
 
-[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v8.0.0...main
+[Unreleased]: https://github.com/jhae-de/stylelint-config-standard-scss/compare/v9.0.0...main
+[9.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v9.0.0
 [8.0.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v8.0.0
 [7.1.0]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.1.0
 [7.0.1]: https://github.com/jhae-de/stylelint-config-standard-scss/releases/tag/v7.0.1

@@ -11,6 +11,7 @@ rules:
         - after-comment
       ignoreAtRules:
         - else
+  selector-no-deprecated: true
 
   # SCSS
   scss/at-rule-no-unknown:

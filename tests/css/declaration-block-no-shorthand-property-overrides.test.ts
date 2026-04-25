@@ -12,7 +12,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected shorthand "padding" after "padding-left"'],
+      messages: ['Overridden property "padding-left" by shorthand "padding"'],
       severities: ['error'],
     },
   },
@@ -26,7 +26,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected shorthand "transition" after "transition-property"'],
+      messages: ['Overridden property "transition-property" by shorthand "transition"'],
       severities: ['error'],
     },
   },
@@ -40,7 +40,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected shorthand "-webkit-transition" after "-webkit-transition-property"'],
+      messages: ['Overridden property "-webkit-transition-property" by shorthand "-webkit-transition"'],
       severities: ['error'],
     },
   },
@@ -56,7 +56,7 @@ new ConfigVerifier('index.yaml').verify(
     `,
     expect: {
       errored: true,
-      messages: ['Unexpected shorthand "border" after "border-top-width"'],
+      messages: ['Overridden property "border-top-width" by shorthand "border"'],
       severities: ['error'],
     },
   },
