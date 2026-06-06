@@ -42,11 +42,11 @@
     "jest": "^30.0",
     "prettier": "^3.0",
     "ts-jest": "^29.4",
-    "typescript": "^5.0",
+    "typescript": "^6.0 <6.1",
     "typescript-eslint": "^8.42"
   },
   "engines": {
-    "node": "^20.19 || ^22.13 || >=24.0"
+    "node": ">=20.19"
   },
   "keywords": [
     "config",
